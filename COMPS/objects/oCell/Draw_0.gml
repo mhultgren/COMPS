@@ -1,0 +1,1 @@
+if (drawCell) draw_self();
