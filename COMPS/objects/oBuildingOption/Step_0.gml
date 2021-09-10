@@ -10,8 +10,13 @@ if (selected) {
 	if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, oBuildingOption)) {
 		
 		with (instance_nearest(mouse_x, mouse_y, oCell)) {
-			if (!contains_structure)
+			if (!contains_structure) {
 				instance_create_layer(x, y, "Buildings", other.building);
+				
+				if (contains_flora) {
+					with instance_nearest(x, y, oFlora) instance_destroy();
+				}
+			}
 		}
 		
 	}

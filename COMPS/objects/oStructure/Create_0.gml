@@ -1,0 +1,2 @@
+drawRed = false;
+sprite = sTree;

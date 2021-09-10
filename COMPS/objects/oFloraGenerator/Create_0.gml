@@ -4,7 +4,7 @@ grid_cells_width = 0;
 grid_cells_height = 0;
 
 
-with instance_create_layer(x, y, "UI", oGrid) {
+with instance_nearest(x, y, oGrid) {
 	other.grid_cells = cells;
 	other.grid_cells_width = cells_width;
 	other.grid_cells_height = cells_height;
@@ -18,7 +18,7 @@ while (trees_generated < 100) {
 	col = irandom(grid_cells_width-1);
 	
 	with (grid_cells[row][col]) {
-		if (!contains_structure) {
+		if (!contains_structure && !contains_flora) {
 			instance_create_layer(x, y, "Buildings", oTree);
 			other.trees_generated++;
 		}
