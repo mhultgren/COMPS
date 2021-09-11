@@ -1,0 +1,2 @@
+instance_destroy(oBuildingPurchase);
+instance_destroy(oBuildingDescription);

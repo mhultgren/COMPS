@@ -10,7 +10,6 @@ with instance_nearest(x, y, oGrid) {
 	other.grid_cells_height = cells_height;
 }
 
-// TODO: make well randomly generated
 trees_generated = 0;
 
 while (trees_generated < 100) {
@@ -18,7 +17,7 @@ while (trees_generated < 100) {
 	col = irandom(grid_cells_width-1);
 	
 	with (grid_cells[row][col]) {
-		if (!contains_structure && !contains_flora) {
+		if (!contains_structure && !contains_flora && !cell_group) {
 			instance_create_layer(x, y, "Buildings", oTree);
 			other.trees_generated++;
 		}
