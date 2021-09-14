@@ -1,13 +1,11 @@
 instance_destroy(oArrow);
 instance_destroy(oExit);
 
+// only call this if destroyed via exit button
 if (!global.building_selected) {
 	instance_destroy(oBuildingOption);
 	
-	with (instance_nearest(x, y, oGrid)) {
-		drawCells = false;
-		changed = true;
-	}
+	global.drawCells = false;
 
 	with (instance_nearest(x, y, oBuildingTool)) {
 		selected = false;

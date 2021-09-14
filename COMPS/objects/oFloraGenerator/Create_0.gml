@@ -12,6 +12,7 @@ with instance_nearest(x, y, oGrid) {
 
 trees_generated = 0;
 
+// generate 100 trees in different spots on the map
 while (trees_generated < 100) {
 	row = irandom(grid_cells_height-1);
 	col = irandom(grid_cells_width-1);

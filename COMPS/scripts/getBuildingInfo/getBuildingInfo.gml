@@ -1,5 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @desc return building info using object reference
+/// @param building_object object reference for info retrieval
 function getBuildingInfo(building_object){
 	var building_struct = {};
 	

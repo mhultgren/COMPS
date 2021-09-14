@@ -1,1 +1,1 @@
-if (drawCell) draw_self();
+if (global.drawCells) draw_self();

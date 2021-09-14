@@ -1,5 +1,3 @@
-drawCells = false;
-changed = false;
 cells = 0;
 
 for (var i=32; i <= room_width + 32; i+=64) {
