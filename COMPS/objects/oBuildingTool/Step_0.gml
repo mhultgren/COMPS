@@ -10,13 +10,6 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id
 			changed = true;
 		}
 	} else {
-		image_index = 0;
-		global.building_selected = false;
-		
 		with (instance_nearest(128, 64, oBuildingMenu)) instance_destroy(id);
-		with (instance_nearest(x, y, oGrid)) {
-			drawCells = false;
-			changed = true;
-		}
 	}
 }

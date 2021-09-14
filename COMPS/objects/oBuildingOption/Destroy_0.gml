@@ -1,2 +1,3 @@
 instance_destroy(oBuildingPurchase);
+instance_destroy(oBuildingTitle);
 instance_destroy(oBuildingDescription);

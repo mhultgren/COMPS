@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Buildings",
+    "path": "folders/Objects/UI/Buildings.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBuildingPurchase",

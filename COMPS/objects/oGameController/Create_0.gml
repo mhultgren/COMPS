@@ -1,4 +1,4 @@
-randomise();
+//randomize();
 
 with instance_create_layer(x, y, "UI", oGrid) {
 	row = irandom(cells_height-3);

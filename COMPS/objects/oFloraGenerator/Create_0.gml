@@ -17,7 +17,7 @@ while (trees_generated < 100) {
 	col = irandom(grid_cells_width-1);
 	
 	with (grid_cells[row][col]) {
-		if (!contains_structure && !contains_flora && !cell_group) {
+		if (!place_meeting(x, y, oStructure) && !place_meeting(x, y, oFlora) && !cell_group) {
 			instance_create_layer(x, y, "Buildings", oTree);
 			other.trees_generated++;
 		}

@@ -14,16 +14,7 @@ if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, o
 	}
 	
 	if (!global.building_selected) {
-		with instance_create_layer(x, y, "UI", oBuildingOption) {
-			building = other.building;
-			sprite = other.sprite;
-			building_title = other.building_title;
-			building_desc = other.building_desc;
-			building_flavor_text = other.building_flavor_text;
-			building_cost = other.building_cost;
-			current_page = other.current_page;
-		}
-			
+		instance_create_layer(128, 64, "UI", oBuildingMenu);
 		instance_destroy();
 	}
 		

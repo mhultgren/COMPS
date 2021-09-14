@@ -21,8 +21,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 16,
-  "gridY": 16,
+  "gridX": 64,
+  "gridY": 64,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"31369de5-6f02-45ab-823b-efdebe9c621f","path":"sprites/sBuildingMenu/sBuildingMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"31369de5-6f02-45ab-823b-efdebe9c621f","path":"sprites/sBuildingMenu/sBuildingMenu.yy",},"LayerId":{"name":"4b005737-46dd-4517-9cfa-39aa2b406947","path":"sprites/sBuildingMenu/sBuildingMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Sprites/UI.yy",
+    "name": "Buildings",
+    "path": "folders/Sprites/UI/Buildings.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBuildingMenu",
