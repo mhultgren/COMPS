@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oStructure",
-    "path": "objects/oStructure/oStructure.yy",
+    "name": "oBuilding",
+    "path": "objects/oBuilding/oBuilding.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

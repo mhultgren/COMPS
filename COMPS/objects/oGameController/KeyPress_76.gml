@@ -75,19 +75,16 @@ if (file_exists("credits.ybx")) {
 			var _currentObject = _objectsMap[? _currentCell.object_id];
 			
 			if (!variable_struct_exists(_objectsSeen, _currentCell.object_id)) {
+				
 				if (_currentObject.object_type == "oStructure") {
 					with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", _currentObject.obj) {
 						x = _currentObject.x;
 						y = _currentObject.y;
 						depth = _currentObject.depth;
 						under_construction = _currentObject.under_construction;
-					
-						var time_passed = time_required - _currentObject.time_required;
-					
+						time_created = _currentObject.time_created;
+						time_left = _currentObject.time_left;
 						time_required = _currentObject.time_required;
-						
-						alarm[0] = clamp(alarm[0]-time_passed, 1, alarm[0]);
-						alarm[1] = clamp(alarm[1]-time_passed, 1, alarm[1]);
 					
 						_newId = id;
 						_objectIndex = object_index;
@@ -105,14 +102,19 @@ if (file_exists("credits.ybx")) {
 						_objectIndex = object_index;
 					}
 				}
-			
-				with (_createdCell) {
-					object_contained = _objectIndex;
-					object_id = _newId;
+			} else {
+				with (_objectsSeen[$_currentCell.object_id]) {
+					_newId = id;
+					_objectIndex = object_index;
 				}
 			}
 			
-			_objectsSeen[$_currentCell.object_id] = 1;
+			with (_createdCell) {
+				object_contained = _objectIndex;
+				object_id = _newId;
+			}
+			
+			_objectsSeen[$_currentCell.object_id] = _newId;
 		}
 		
 		_cellCount++;

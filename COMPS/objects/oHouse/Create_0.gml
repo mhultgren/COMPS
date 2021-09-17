@@ -1,7 +1,6 @@
 under_construction = true;
+time_created = unixTimestamp(date_current_datetime());
 
 // set time required here, used to inform building creation & drawn timer
-time_required = 30 * room_speed;
-
-alarm[0] = time_required * 0.5;
-alarm[1] = time_required;
+time_required = 30;
+time_left = time_required;

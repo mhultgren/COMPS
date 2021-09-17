@@ -7,6 +7,8 @@ cell_group = 0;
 
 under_construction = false;
 time_required = 0;
+time_left = time_required;
+time_created = unixTimestamp(date_current_datetime());
 
 var well_id = id;
 
