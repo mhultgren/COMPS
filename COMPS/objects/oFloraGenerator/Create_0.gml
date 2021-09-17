@@ -19,7 +19,15 @@ while (trees_generated < 100) {
 	
 	with (grid_cells[row][col]) {
 		if (!place_meeting(x, y, oStructure) && !place_meeting(x, y, oFlora) && !cell_group) {
-			instance_create_layer(x, y, "Buildings", oTree);
+			
+			var _addedId = 0;
+			with instance_create_layer(x, y, "Buildings", oTree) {
+				_addedId = id;
+			}
+			
+			object_contained = oTree;
+			object_id = _addedId;
+			
 			other.trees_generated++;
 		}
 	}

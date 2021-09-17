@@ -7,9 +7,5 @@ if (!global.building_selected) {
 	
 	global.drawCells = false;
 
-	with (instance_nearest(x, y, oBuildingTool)) {
-		selected = false;
-		image_index = 0;
-		global.building_selected = false;
-	}
+	instance_create_layer(1056, 672, "UI", oBuildingTool);
 }

@@ -3,7 +3,16 @@ if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, o
 		
 	with (instance_nearest(mouse_x, mouse_y, oCell)) {
 		if (!contains_structure) {
-			instance_create_layer(x, y, "Buildings", other.building);
+			var _addedId = 0;
+			var _addedObject = 0;
+			
+			with instance_create_layer(x, y, "Buildings", other.building) {
+				_addedObject = object_index;
+				_addedId = id;
+			}
+			
+			object_contained = _addedObject;
+			object_id = _addedId;
 				
 			if (contains_flora) {
 				with instance_nearest(x, y, oFlora) instance_destroy();

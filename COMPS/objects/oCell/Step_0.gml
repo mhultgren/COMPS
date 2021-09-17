@@ -1,5 +1,5 @@
-contains_structure = place_meeting(x, y, oStructure);
-contains_flora = place_meeting(x, y, oFlora);
+contains_structure = object_contained != -1 && object_is_ancestor(object_contained, oStructure);
+contains_flora = object_contained != -1 && object_is_ancestor(object_contained, oFlora);
 
 if (contains_flora) {
 	with instance_nearest(x, y, oFlora) other.depth = depth + 1;

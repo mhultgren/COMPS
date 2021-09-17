@@ -1,5 +1,9 @@
-contains_structure = place_meeting(x, y, oStructure);
-contains_flora = place_meeting(x, y, oFlora);
+// TODO: add object ref here, so saving structures / flora is easy
+
+object_contained = -1;
+object_id = -1;
+contains_structure = object_is_ancestor(object_contained, oStructure);
+contains_flora = object_is_ancestor(object_contained, oFlora);
 
 prev_depth = depth;
 
