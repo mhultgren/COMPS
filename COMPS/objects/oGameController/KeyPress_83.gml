@@ -38,11 +38,11 @@ with (oGrid) {
 						
 						var _saveObject = {};
 						
-						if (object_is_ancestor(object_index, oStructure)) {
+						if (object_is_ancestor(object_index, oBuilding)) {
 							_saveObject = {
 								obj : object_index,
 								object_id : id,
-								object_type: "oStructure",
+								object_type: "oBuilding",
 								x : x,
 								y : y,
 								depth : depth,
@@ -50,6 +50,7 @@ with (oGrid) {
 								time_required : time_required,
 								time_left : time_left,
 								time_created : time_created,
+								time_last_generated : time_last_generated,
 							}
 						}
 						

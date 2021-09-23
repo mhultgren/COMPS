@@ -1,1 +1,0 @@
-draw_sprite_ext(sBuildingTool, 0, x, y, global.zoom, global.zoom, 0, c_white, 1);

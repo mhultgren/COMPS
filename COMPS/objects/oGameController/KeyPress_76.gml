@@ -77,7 +77,7 @@ if (file_exists("credits.ybx")) {
 			
 			if (!variable_struct_exists(_objectsSeen, _currentCell.object_id)) {
 				
-				if (_currentObject.object_type == "oStructure") {
+				if (_currentObject.object_type == "oBuilding") {
 					with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", _currentObject.obj) {
 						x = _currentObject.x;
 						y = _currentObject.y;
@@ -86,6 +86,7 @@ if (file_exists("credits.ybx")) {
 						time_created = _currentObject.time_created;
 						time_left = _currentObject.time_left;
 						time_required = _currentObject.time_required;
+						time_last_generated = _currentObject.time_last_generated;
 					
 						_newId = id;
 						_objectIndex = object_index;

@@ -1,5 +1,3 @@
-// TODO: add object ref here, so saving structures / flora is easy
-
 object_contained = -1;
 object_id = -1;
 contains_structure = object_is_ancestor(object_contained, oStructure);

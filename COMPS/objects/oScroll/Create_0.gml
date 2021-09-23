@@ -15,4 +15,5 @@ original_y_size = display_get_gui_height();
 global.zoom = 1;
 target_zoom = global.zoom;
 zoom_spd = 0.1;
-zoom_to_default = false;
+zoom_x = room_width / 2;
+zoom_y = room_width / 2;

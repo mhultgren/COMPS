@@ -1,4 +1,3 @@
-// TODO: clean up, remove 'selected' variable
 building = oTestBuilding;
 sprite = sTestBuilding;
 building_title = "";

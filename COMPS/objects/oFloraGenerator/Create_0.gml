@@ -1,4 +1,3 @@
-// TODO: make grid show below other UI elements
 grid_cells = 0;
 grid_cells_width = 0;
 grid_cells_height = 0;
@@ -12,8 +11,8 @@ with instance_nearest(x, y, oGrid) {
 
 trees_generated = 0;
 
-// generate 100 trees in different spots on the map
-while (trees_generated < 100) {
+// generate 400 trees in different spots on the map
+while (trees_generated < 400) {
 	row = irandom(grid_cells_height-1);
 	col = irandom(grid_cells_width-1);
 	

@@ -1,4 +1,4 @@
-if (global.scroll || zoom_to_default) {
+if (global.scroll) {
 	#region panning
 	var xx = camera_get_view_x(view_camera[0]);
 	var yy = camera_get_view_y(view_camera[0]);
@@ -31,14 +31,20 @@ if (global.scroll || zoom_to_default) {
 	#endregion
 	
 	//TODO: scroll towards mouse position
-	//TODO: handle building menu at zoom in (if necessary)
 	#region zooming
 	var mouse_input = mouse_wheel_down() - mouse_wheel_up();
-	target_zoom = clamp(target_zoom + mouse_input*.1, 0.1, 2);
 	
-	global.zoom += (target_zoom - global.zoom) * zoom_spd;
-	camera_set_view_size(view_camera[0], original_x_size*global.zoom, original_y_size*global.zoom);
+	if (mouse_input < 0 && abs(target_zoom - global.zoom) < 0.04) {
+		zoom_x = mouse_x;
+		zoom_y = mouse_y;
+	}
 	
-	zoom_to_default = global.zoom == 1;
+	target_zoom = clamp(target_zoom + mouse_input*.2, 1, 2);
+	
+	if (target_zoom != global.zoom) {
+		global.zoom += (target_zoom - global.zoom) * zoom_spd;
+		camera_set_view_pos(view_camera[0], clamp(zoom_x - original_x_size*global.zoom/2, 0, room_width-original_x_size*global.zoom), clamp(zoom_y - original_y_size*global.zoom/2, 0, room_height-original_y_size*global.zoom));
+		camera_set_view_size(view_camera[0], original_x_size*global.zoom, original_y_size*global.zoom);
+	}
 	#endregion
 }

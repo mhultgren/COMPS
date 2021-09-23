@@ -2,6 +2,7 @@ if (global.building_selected) {
 	with instance_create_layer(x, y, "UI", oCreator) {
 		building = other.building;
 		sprite = other.sprite;
+		amount_spent = other.building_cost;
 	}
 	
 	instance_destroy();

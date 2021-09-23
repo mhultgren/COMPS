@@ -6,7 +6,6 @@ if (mouse_hovering) {
 	else image_index = 2;
 } else image_index = 0;
 
-// TODO: deduct price here
 if (mouse_hovering && mouse_check_button_pressed(mb_left)) {
 	if (affordable) {
 		global.building_selected = true;
