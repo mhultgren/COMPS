@@ -1,2 +1,4 @@
 building_desc = "";
-building_flavor_text = "";
+
+image_xscale = global.zoom;
+image_yscale = global.zoom;

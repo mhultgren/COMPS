@@ -3,6 +3,7 @@
 global.building_selected = false;
 global.current_page = 0;
 global.drawCells = false;
+global.scroll = true;
 
 instance_destroy(oFlora);
 instance_destroy(oStructure);

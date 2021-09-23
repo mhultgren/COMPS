@@ -9,7 +9,7 @@ if (menu_page != global.current_page) {
 	
 	building_info = getBuildingInfo(unlocked_buildings[global.current_page]);
 	
-	with instance_create_layer(x + sprite_width/2, y + sprite_height/2, "UI", oBuildingOption) {
+	with instance_create_layer(x + sprite_width/2*global.zoom, y + sprite_height/2*global.zoom, "UI", oBuildingOption) {
 		building = other.building_info.building;
 		sprite = other.building_info.sprite;
 		building_title = other.building_info.building_title;

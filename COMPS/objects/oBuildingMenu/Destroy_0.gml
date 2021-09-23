@@ -1,3 +1,4 @@
+global.scroll = true;
 instance_destroy(oArrow);
 instance_destroy(oExit);
 

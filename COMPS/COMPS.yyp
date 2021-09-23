@@ -7,6 +7,7 @@
     {"id":{"name":"saveGameUser","path":"scripts/saveGameUser/saveGameUser.yy",},"order":2,},
     {"id":{"name":"oBuilding","path":"objects/oBuilding/oBuilding.yy",},"order":1,},
     {"id":{"name":"oBuildingOption","path":"objects/oBuildingOption/oBuildingOption.yy",},"order":2,},
+    {"id":{"name":"oScroll","path":"objects/oScroll/oScroll.yy",},"order":2,},
     {"id":{"name":"sBuildingOption","path":"sprites/sBuildingOption/sBuildingOption.yy",},"order":1,},
     {"id":{"name":"oCell","path":"objects/oCell/oCell.yy",},"order":2,},
     {"id":{"name":"encrypt","path":"scripts/encrypt/encrypt.yy",},"order":3,},
