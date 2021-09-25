@@ -11,7 +11,7 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id
 		}
 	}
 	
-	instance_create_layer((camera_get_view_x(view_camera[0]) + 128) * global.zoom, (camera_get_view_y(view_camera[0]) + 64) * global.zoom, "UI", oBuildingMenu);
+	instance_create_layer(camera_get_view_x(view_camera[0]) + 128*global.zoom, camera_get_view_y(view_camera[0]) + 64*global.zoom, "UI", oBuildingMenu);
 	global.drawCells = true;
 	instance_destroy();
 }

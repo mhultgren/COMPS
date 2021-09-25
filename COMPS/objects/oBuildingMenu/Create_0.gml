@@ -6,6 +6,9 @@ menu_page = global.current_page;
 
 building_info = getBuildingInfo(unlocked_buildings[global.current_page]);
 
+menu_width = sprite_width;
+menu_height = sprite_height;
+
 with instance_create_layer(x + 416*global.zoom, y + 544*global.zoom, "UI", oArrow)  {
 	depth = other.depth - 1;
 	rotate = true;

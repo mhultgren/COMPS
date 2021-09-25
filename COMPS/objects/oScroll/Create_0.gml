@@ -1,4 +1,4 @@
-buffer = 80;
+buffer = 40;
 left_edge = 0;
 left_edge_max = left_edge + buffer;
 right_edge = display_get_gui_width();
