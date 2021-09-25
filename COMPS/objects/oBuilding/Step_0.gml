@@ -4,7 +4,7 @@ if (under_construction) {
 	if (seconds_passed >= time_required) {
 		under_construction = false;
 		image_index = 2;
-		time_last_generated = unixTimestamp(date_current_datetime());
+		time_last_generated = unixTimestamp(date_current_datetime()) - (seconds_passed - time_required);
 	} else if (seconds_passed >= time_required * 0.5) image_index = 1;
 	else image_index = 0;
 	

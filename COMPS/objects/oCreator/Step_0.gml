@@ -17,7 +17,7 @@ if (keyboard_check_pressed(vk_escape)) {
 if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, oBuildingOption)) {
 		
 	with (instance_nearest(mouse_x, mouse_y, oCell)) {
-		if (!contains_structure) {
+		if (!contains_structure && !contains_water) {
 			var _addedId = 0;
 			var _addedObject = 0;
 			

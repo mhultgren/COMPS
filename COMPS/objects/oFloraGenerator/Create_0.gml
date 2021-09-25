@@ -17,7 +17,7 @@ while (trees_generated < 400) {
 	col = irandom(grid_cells_width-1);
 	
 	with (grid_cells[row][col]) {
-		if (!place_meeting(x, y, oStructure) && !place_meeting(x, y, oFlora) && !cell_group) {
+		if (!place_meeting(x, y, oStructure) && !place_meeting(x, y, oFlora) && !place_meeting(x, y, oWater) && !cell_group) {
 			
 			var _addedId = 0;
 			with instance_create_layer(x, y, "Buildings", oTree) {

@@ -39,7 +39,7 @@ function saveGameDefault(){
 						
 							if (object_is_ancestor(object_index, oBuilding)) {
 								_saveObject = {
-									obj : object_index,
+									obj : object_get_name(object_index),
 									object_id : id,
 									object_type: "oBuilding",
 									x : x,
@@ -55,7 +55,7 @@ function saveGameDefault(){
 						
 							else if (object_is_ancestor(object_index, oFlora)) {
 								_saveObject = {
-									obj : object_index,
+									obj : object_get_name(object_index),
 									object_id : id,
 									object_type: "oFlora",
 									x : x,
@@ -63,6 +63,17 @@ function saveGameDefault(){
 									depth : depth,
 									normal_index : normal_index,
 									red_index : red_index,
+								}
+							}
+							
+							else if (object_is_ancestor(object_index, oWater)) {
+								_saveObject = {
+									obj : object_get_name(object_index),
+									object_id : id,
+									object_type: "oWater",
+									x : x,
+									y : y,
+									depth : depth,
 								}
 							}
 						

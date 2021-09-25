@@ -4,8 +4,10 @@ function loadGame(){
 	global.current_page = 0;
 	global.drawCells = false;
 	global.scroll = true;
+	global.zoom = 1;
 
 	instance_destroy(oFlora);
+	instance_destroy(oWater);
 	instance_destroy(oStructure);
 	instance_destroy(oGrid);
 	instance_destroy(oBuildingMenu);
@@ -79,7 +81,7 @@ function loadGame(){
 				if (!variable_struct_exists(_objectsSeen, _currentCell.object_id)) {
 				
 					if (_currentObject.object_type == "oBuilding") {
-						with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", _currentObject.obj) {
+						with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", getObjectIndex(_currentObject.obj)) {
 							x = _currentObject.x;
 							y = _currentObject.y;
 							depth = _currentObject.depth;
@@ -95,12 +97,23 @@ function loadGame(){
 					}
 			
 					else if (_currentObject.object_type == "oFlora") {
-						with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", _currentObject.obj) {
+						with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", getObjectIndex(_currentObject.obj)) {
 							x = _currentObject.x;
 							y = _currentObject.y;
 							depth = _currentObject.depth;
 							normal_index = _currentObject.normal_index;
 							red_index = _currentObject.red_index;
+							_newId = id;
+							_objectIndex = object_index;
+						}
+					}
+					
+					else if (_currentObject.object_type == "oWater") {
+						with instance_create_layer(_currentObject.x, _currentObject.y, "Buildings", getObjectIndex(_currentObject.obj)) {
+							x = _currentObject.x;
+							y = _currentObject.y;
+							depth = _currentObject.depth;
+							first_step = true;
 							_newId = id;
 							_objectIndex = object_index;
 						}
