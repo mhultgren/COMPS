@@ -1,14 +1,23 @@
 if (global.building_selected) {
-	with instance_create_layer(x, y, "UI", oCreator) {
-		building = other.building;
-		sprite = other.sprite;
-		amount_spent = other.building_cost;
+	if (!is_multicell) {
+		with instance_create_layer(x, y, "UI", oCreator) {
+			building = other.building;
+			sprite = other.sprite;
+			amount_spent = other.building_cost;
+		}
+	} else {
+		with instance_create_layer(x, y, "UI", oMultiCellCreator) {
+			building = other.building;
+			sprite = other.sprite;
+			amount_spent = other.building_cost;
+		}
 	}
 	
 	instance_destroy();
 }
 
 if (first_step) {
+	is_multicell = sprite_get_width(sprite) > 64;
 	var unit = 64;
 	
 	with instance_create_layer(x-(unit * 4)*global.zoom, y, "UI", oBuildingPurchase) {

@@ -10,14 +10,26 @@ if (new_length != alerts_size) {
 	instance_destroy(oAlert);
 	
 	for (var i=0; i<new_length; i++) {
-		with instance_create_layer(x/global.zoom + 48, y/global.zoom + (i+1)*64, "UI", oDialogueAlert) {
-			dialogue_text = other.alerts[i].text;
-			objective = other.alerts[i].objective;
-			opened = other.alerts[i].opened;
-			alert_index = i;
-			depth = other.depth-1;
+		if (!alerts[i].objective) {
+			with instance_create_layer(x/global.zoom + 48, y/global.zoom + (i+1)*64, "UI", oDialogueAlert) {
+				dialogue_text = other.alerts[i].text;
+				opened = other.alerts[i].opened;
+				alert_index = i;
+				depth = other.depth-1;
+			}
+		} else {
+			with instance_create_layer(x/global.zoom + 48, y/global.zoom + (i+1)*64, "UI", oObjectiveAlert) {
+				dialogue_text = other.alerts[i].text;
+				objective_name = other.alerts[i].objective_name;
+				objective_fulfilled = other.alerts[i].objective_fulfilled;
+				opened = other.alerts[i].opened;
+				alert_index = i;
+				depth = other.depth-1;
+			}
 		}
 	}
+	
+	saveGameDefault();
 }
 
 alerts_size = new_length;

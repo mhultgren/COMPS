@@ -10,11 +10,23 @@ if (contains_flora) {
 	with instance_nearest(x, y, oWater) other.depth = depth + 1;
 } else depth = prev_depth;
 
-if (global.building_selected && position_meeting(mouse_x, mouse_y, id)) {
-	if (contains_structure || contains_water) image_index = 2;
-	else image_index = 1;
+if (!instance_exists(oMultiCellCreator)) {
+	if (global.building_selected && position_meeting(mouse_x, mouse_y, id)) {
+		if (contains_structure || contains_water) image_index = 2;
+		else image_index = 1;
+	} else {
+		image_index = 0;
+	}
 } else {
-	image_index = 0;
+	var cell_x = floor(mouse_x / 64) * 64;
+	var cell_y = floor(mouse_y / 64) * 64;
+	
+	var is_in_rectangle = point_in_rectangle(x, y, cell_x, cell_y, cell_x + 128, cell_y + 128);
+	
+	if (is_in_rectangle) {
+		if (contains_structure || contains_water) image_index = 2;
+		else image_index = 1;
+	} else image_index = 0;
 }
 
 if (cell_group_selected) {

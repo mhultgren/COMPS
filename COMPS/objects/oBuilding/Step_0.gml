@@ -15,7 +15,6 @@ if (under_construction) {
 		
 		if (seconds_passed >= time_required_generate) {
 			var num_to_generate = floor(seconds_passed / time_required_generate);
-			
 			global.coins += amount_generated * num_to_generate;
 			time_last_generated += time_required_generate * num_to_generate;
 		}

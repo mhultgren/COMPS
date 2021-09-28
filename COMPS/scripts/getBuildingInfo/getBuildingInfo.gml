@@ -26,6 +26,17 @@ function getBuildingInfo(building_object){
 				building_cost : 35
 			};
 		break;
+		
+		case oWell:
+			building_struct =
+			{
+				building : oWell,
+				sprite : sWell,
+				building_title : "Well",
+				building_desc : "dasdgha ha dkjsahdjahd jsahkj hdjhs dshakh sjjsn skdhsnn dh shkd wiuha sbn",
+				building_cost : 10
+			}
+		break;
 	}
 	
 	return building_struct;

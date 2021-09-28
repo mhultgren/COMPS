@@ -5,6 +5,10 @@ function loadGame(){
 	global.drawCells = false;
 	global.scroll = true;
 	global.zoom = 1;
+	global.year = 1092;
+	
+	// TODO: add population increase mechanic
+	global.population = 0;
 
 	instance_destroy(oFlora);
 	instance_destroy(oWater);
@@ -12,6 +16,7 @@ function loadGame(){
 	instance_destroy(oGrid);
 	instance_destroy(oBuildingMenu);
 	instance_destroy(oCreator);
+	instance_destroy(oAlertToolbar);
 
 	if (file_exists("credits.ybx")) {
 		var _buffer = buffer_load("credits.ybx");
@@ -26,7 +31,8 @@ function loadGame(){
 		var _loadAlerts = _loadData[3];
 	
 		global.coins = _loadGlobals.coins;
-	
+		global.population = _loadGlobals.population;
+		
 		var _objectsMap = ds_map_create();
 	
 		// populate object dictionary, using id as key
@@ -138,7 +144,7 @@ function loadGame(){
 	
 		with (_grid) cells = _cells;
 	
-		with oAlertToolbar {
+		with instance_create_layer(1280, 128, "UI", oAlertToolbar) {
 			alerts = _loadAlerts;
 			alerts_size = 0;
 		}
@@ -153,6 +159,9 @@ function loadGame(){
 		buffer_delete(_buffer);
 	
 		var _loadData = json_parse(_string);
+	
+		global.year = _loadData.year;
+		global.coins = _loadData.coins;
 	
 		if (_loadData.year == 2434312) game_end();
 	}

@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function getUnlockedBuildings(){
-	var unlocked_buildings = [oTestBuilding, oHouse];
+	var unlocked_buildings = [oTestBuilding, oHouse, oWell];
 	
 	return unlocked_buildings;
 }

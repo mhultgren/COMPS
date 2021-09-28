@@ -28,6 +28,8 @@ if (mouse_hovering) {
 			array_delete(alerts, other.alert_index, 1);
 		}
 		
+		saveGameDefault();
+		
 		instance_destroy();
 	}
 }
