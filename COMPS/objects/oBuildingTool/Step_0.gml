@@ -4,6 +4,10 @@ y = camera_get_view_y(view_camera[0]) + 672 * global.zoom;
 image_xscale = global.zoom;
 image_yscale = global.zoom;
 
+if (!file_exists("credits.ybx")) {
+	sprite_index = sBuildingToolFlashing;
+} else sprite_index = sBuildingTool;
+
 if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
 	if (global.zoom < 1) {
 		with (oScroll) {

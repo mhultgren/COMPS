@@ -16,6 +16,18 @@ function getBuildingInfo(building_object){
 			};
 		break;
 		
+		case oTutorialHouse:
+			building_struct =
+			{
+				building		: oTutorialHouse,
+				sprite			: sTutorialHouse,
+				// TODO: building title change?
+				building_title	: "Tutorial House",
+				building_desc	: "Build this house! It's free after all.",
+				building_cost	: 0
+			};
+		break;
+		
 		case oHouse:
 			building_struct =
 			{

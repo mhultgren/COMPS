@@ -10,5 +10,7 @@ function getObjectIndex(obj_index){
 			return oTree;
 		case "oRiver":
 			return oRiver;
+		case "oTutorialHouse":
+			return oTutorialHouse;
 	}
 }

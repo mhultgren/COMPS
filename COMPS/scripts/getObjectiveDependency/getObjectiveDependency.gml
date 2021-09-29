@@ -5,5 +5,9 @@ function getObjectiveDependency(obj_name){
 	switch (string_lower(obj_name)) {
 		case "test objective":
 			return testObjective();
+		case "welcome to game title!":
+			return firstObjective();
+		case "a brief wait":
+			return secondObjective();
 	}
 }

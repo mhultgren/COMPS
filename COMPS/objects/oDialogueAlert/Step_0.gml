@@ -14,15 +14,10 @@ if (mouse_hovering) {
 	
 		with instance_create_layer(camera_get_view_x(view_camera[0]) + 364*global.zoom, camera_get_view_y(view_camera[0]) + 96*global.zoom, "UI", oDialogueBox) {
 			objective = false;
+			opened = true;
 			dialogue_text = other.dialogue_text;
 			alert_index = other.alert_index;
 		}
-	
-		with oAlertToolbar {
-			array_delete(alerts, other.alert_index, 1);
-		}
-	
-		instance_destroy();
 	} else if (mouse_check_button_pressed(mb_right) && opened) {
 		with oAlertToolbar {
 			array_delete(alerts, other.alert_index, 1);

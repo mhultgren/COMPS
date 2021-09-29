@@ -5,7 +5,7 @@ function loadGame(){
 	global.drawCells = false;
 	global.scroll = true;
 	global.zoom = 1;
-	global.year = 1092;
+	global.year = 945;
 	
 	// TODO: add population increase mechanic
 	global.population = 0;
@@ -32,6 +32,7 @@ function loadGame(){
 	
 		global.coins = _loadGlobals.coins;
 		global.population = _loadGlobals.population;
+		global.parameters_met = _loadGlobals.parameters_met;
 		
 		var _objectsMap = ds_map_create();
 	
@@ -96,6 +97,7 @@ function loadGame(){
 							time_left = _currentObject.time_left;
 							time_required = _currentObject.time_required;
 							time_last_generated = _currentObject.time_last_generated;
+							just_constructed = _currentObject.just_constructed;
 					
 							_newId = id;
 							_objectIndex = object_index;

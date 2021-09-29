@@ -1,7 +1,7 @@
 image_xscale = global.zoom;
 image_yscale = global.zoom;
 
-if (global.building_selected) instance_destroy();
+if (global.building_selected || max_pages <= 0) instance_destroy();
 // TODO: keep grid, re-add building menu on alert close
 if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, id)) instance_destroy();
 

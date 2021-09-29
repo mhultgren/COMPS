@@ -1,6 +1,12 @@
+draw_set_font(fMain);
+
 if (file_exists("credits.ybx")) loadGame();
 else {
 	randomize();
+	global.coins = 50;
+	global.year = 945;
+	global.population = 0;
+	global.parameters_met = [];
 
 	/*
 	with instance_create_layer(x, y, "UI", oGrid) {
@@ -19,4 +25,7 @@ else {
 		instance_create_layer(cell_water, 32, "Buildings", oRiver);
 	}
 	instance_create_layer(x, y, "UI", oFloraGenerator);
+	instance_create_layer(1280, 128, "UI", oAlertToolbar);
 }
+
+instance_create_layer(1216, 32, "UI", oGameInfo);

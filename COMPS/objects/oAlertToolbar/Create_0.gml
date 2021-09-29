@@ -4,5 +4,5 @@ var test_alert = {
 	opened : false
 };
 
-alerts = [test_alert];
+alerts = [];
 alerts_size = 0;

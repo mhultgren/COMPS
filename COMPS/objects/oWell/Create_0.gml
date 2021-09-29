@@ -4,6 +4,7 @@ sprite = sWell;
 red_index = 1;
 normal_index = 0;
 cell_group = 0;
+just_constructed = true;
 
 under_construction = true;
 time_required = 86400;

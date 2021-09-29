@@ -8,6 +8,7 @@ function saveGameDefault(){
 		coins : global.coins,
 		year : global.year,
 		population: global.population,
+		parameters_met : global.parameters_met
 	}
 
 	array_push(_saveData, _saveGlobals);
@@ -50,6 +51,7 @@ function saveGameDefault(){
 									time_left : time_left,
 									time_created : time_created,
 									time_last_generated : time_last_generated,
+									just_constructed : just_constructed,
 								}
 							}
 						
