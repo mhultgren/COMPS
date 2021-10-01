@@ -67,7 +67,7 @@ function getBuildingInfo(building_object){
 				building : oMine,
 				sprite : sMine,
 				building_title : "Mine",
-				building_desc : "What is the point of shiny things if not to dig them up and exchange them for more things?",
+				building_desc : "What is the point of shiny things if not to dig them up out of the ground and exchange them for more, less shiny things?",
 				building_cost : 150 * (instance_number(oMine)),
 			}
 		break;

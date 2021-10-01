@@ -10,7 +10,9 @@ under_construction = true;
 time_required = 86400;
 time_left = time_required;
 time_created = unixTimestamp(date_current_datetime());
+time_last_generated = 0;
 
+/*
 var well_id = id;
 
 with instance_create_layer(x, y, "UI", oCellGroup) {
@@ -28,3 +30,4 @@ with instance_create_layer(x, y, "UI", oCellGroup) {
 	
 	other.cell_group = id;
 }
+*/

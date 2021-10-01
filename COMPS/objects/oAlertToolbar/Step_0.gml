@@ -33,3 +33,4 @@ if (new_length != alerts_size) {
 }
 
 alerts_size = new_length;
+show_debug_message(alerts_size);

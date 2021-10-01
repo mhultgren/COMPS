@@ -13,5 +13,7 @@ function getObjectiveDependency(obj_name){
 			return fiveStructuresObjective();
 		case "mine and yours":
 			return mineObjective();
+		case "don't worry, keep building":
+			return wellObjective();
 	}
 }
