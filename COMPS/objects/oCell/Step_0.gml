@@ -5,7 +5,7 @@ contains_water = object_contained != -1 && object_is_ancestor(object_contained, 
 if (contains_flora) {
 	with instance_nearest(x, y, oFlora) other.depth = depth + 1;
 } else if (contains_structure) {
-	with instance_nearest(x, y, oStructure) other.depth = depth - 1;
+	with instance_nearest(x, y, oStructure) other.depth = depth + 1;
 } else if (contains_water) {
 	with instance_nearest(x, y, oWater) other.depth = depth + 1;
 } else depth = prev_depth;
