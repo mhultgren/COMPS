@@ -35,7 +35,7 @@ function getBuildingInfo(building_object){
 				sprite : sHouse,
 				building_title : "House",
 				building_desc : "A little tiny house",
-				building_cost : 35
+				building_cost : 35 * ((instance_number(oHouse) * .2) + 1)
 			};
 		break;
 		
@@ -47,6 +47,50 @@ function getBuildingInfo(building_object){
 				building_title : "Well",
 				building_desc : "dasdgha ha dkjsahdjahd jsahkj hdjhs dshakh sjjsn skdhsnn dh shkd wiuha sbn",
 				building_cost : 10
+			}
+		break;
+		
+		case oBridge:
+			building_struct =
+			{
+				building : oBridge,
+				sprite : sBridge,
+				building_title : "Bridge",
+				building_desc : "A river runs underneath it. Give your residents the ability to see whether the grass is truly greener!",
+				building_cost : 70,
+			}
+		break;
+		
+		case oMine:
+			building_struct =
+			{
+				building : oMine,
+				sprite : sMine,
+				building_title : "Mine",
+				building_desc : "What is the point of shiny things if not to dig them up and exchange them for more things?",
+				building_cost : 150 * (instance_number(oMine)),
+			}
+		break;
+			
+		case oBoatHouse:
+			building_struct =
+			{
+				building : oBoatHouse,
+				sprite : sBoatHouse,
+				building_title : "Boat House",
+				building_desc : "No society would be complete without a boat house! What is the function of a boat house, you might ask? Boats, of course! Boat houses also tend to be the perfect place for one to wind down with a nice kickback or wind up with an energizing party, maybe it's the waterfront location.",
+				building_cost : 500 * ((instance_number(oBoatHouse) * .2) + 1),
+			}
+		break;
+			
+		case oStorehouse:
+			building_struct =
+			{
+				building : oStorehouse,
+				sprite : sStorehouse,
+				building_title : "Storehouse",
+				building_desc : "A well functioning society should have a place to store their food, wouldn't you think? Everybody needs to eat, and the people of GAME TITLE tend to be a hungry bunch.",
+				building_cost : 100 * ((instance_number(oStorehouse) * .2) + 1),
 			}
 		break;
 	}

@@ -9,5 +9,9 @@ function getObjectiveDependency(obj_name){
 			return firstObjective();
 		case "a brief wait":
 			return secondObjective();
+		case "five structures and a bridge":
+			return fiveStructuresObjective();
+		case "mine and yours":
+			return mineObjective();
 	}
 }

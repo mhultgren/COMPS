@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "New Buildings",
+    "path": "folders/Scripts/Buildings/New Buildings.yy",
   },
   "resourceVersion": "1.0",
   "name": "getBuildingInfo",

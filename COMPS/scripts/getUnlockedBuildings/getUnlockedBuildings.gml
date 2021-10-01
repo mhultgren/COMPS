@@ -5,5 +5,5 @@ function getUnlockedBuildings(){
 	with oTutorialHouse {
 		if (under_construction) return [];
 	}
-	return [oHouse];
+	return [oHouse, oBridge, oMine, oBoatHouse, oStorehouse];
 }

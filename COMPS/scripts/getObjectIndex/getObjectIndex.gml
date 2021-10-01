@@ -12,5 +12,13 @@ function getObjectIndex(obj_index){
 			return oRiver;
 		case "oTutorialHouse":
 			return oTutorialHouse;
+		case "oBridge":
+			return oBridge;
+		case "oMine":
+			return oMine;
+		case "oBoatHouse":
+			return oBoatHouse;
+		case "oStorehouse":
+			return oStorehouse;
 	}
 }

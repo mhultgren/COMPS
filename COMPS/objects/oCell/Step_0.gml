@@ -12,7 +12,13 @@ if (contains_flora) {
 
 if (!instance_exists(oMultiCellCreator)) {
 	if (global.building_selected && position_meeting(mouse_x, mouse_y, id)) {
-		if (contains_structure || contains_water) image_index = 2;
+		var creator_building = 0;
+		
+		with oCreator {
+			creator_building = building;
+		}
+		
+		if (!meetsRequirements(creator_building, id, 0)) image_index = 2;
 		else image_index = 1;
 	} else {
 		image_index = 0;
@@ -21,8 +27,19 @@ if (!instance_exists(oMultiCellCreator)) {
 	var cell_x = floor(mouse_x / 64) * 64;
 	var cell_y = floor(mouse_y / 64) * 64;
 	
-	var is_in_rectangle = point_in_rectangle(x, y, cell_x, cell_y, cell_x + 128, cell_y + 128);
+	var multi_cell_sprite_width = 0;
+	var multi_cell_sprite_height = 0;
+	var multi_cell_building = 0;
 	
+	with oMultiCellCreator {
+		multi_cell_sprite_width = sprite_get_width(sprite);
+		multi_cell_sprite_height = sprite_get_height(sprite);
+		multi_cell_building = building;
+	}
+	
+	var is_in_rectangle = point_in_rectangle(x, y, cell_x, cell_y, cell_x + multi_cell_sprite_width, cell_y + multi_cell_sprite_height);
+	
+	// TODO: make multi cell use meetsRequirements()
 	if (is_in_rectangle) {
 		if (contains_structure || contains_water) image_index = 2;
 		else image_index = 1;

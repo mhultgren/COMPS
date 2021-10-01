@@ -25,14 +25,14 @@ if (!first_step) {
 		if (at_leftmost) left = false;
 	
 		if (splits) {
-			instance_create_layer(x + 64, y + 64, "Buildings", oRiver);
-			instance_create_layer(x - 64, y + 64, "Buildings", oRiver);
+			instance_create_layer(x + 64, y + 64, "Water", oRiver);
+			instance_create_layer(x - 64, y + 64, "Water", oRiver);
 		} else {
 			if (middle) {
-				instance_create_layer(x, y + 64, "Buildings", oRiver);
+				instance_create_layer(x, y + 64, "Water", oRiver);
 			} else {
-				if (left) instance_create_layer(x - 64, y + 64, "Buildings", oRiver);
-				else instance_create_layer(x + 64, y + 64, "Buildings", oRiver);
+				if (left) instance_create_layer(x - 64, y + 64, "Water", oRiver);
+				else instance_create_layer(x + 64, y + 64, "Water", oRiver);
 			}
 		}
 	}

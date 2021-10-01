@@ -15,18 +15,20 @@ if (keyboard_check_pressed(vk_escape)) {
 
 if (mouse_check_button_pressed(mb_left)) {
 	var cell_list = ds_list_create();
-	var none_blocked = true;
+	var struct_width = sprite_get_width(sprite);
+	var struct_height = sprite_get_height(sprite);
+		
 	
 	with (instance_nearest(mouse_x, mouse_y, oCell)) {
-		var cell_list_size = collision_rectangle_list(x-32, y-32, x+95, y+95, oCell, false, false, cell_list, false);
+		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);
 		
 		for (var i=0; i<cell_list_size; i++) {
 			with cell_list[| i] {
-				if (contains_structure || contains_water) none_blocked = false;
+				show_debug_message(string(x) + ", " + string(y));
 			}
 		}
 		
-		if (none_blocked) {
+		if (meetsRequirements(other.building, id, cell_list)) {
 			var _addedId = 0;
 			var _addedObject = 0;
 			

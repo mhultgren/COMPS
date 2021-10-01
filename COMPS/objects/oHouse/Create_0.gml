@@ -11,4 +11,4 @@ time_last_generated = 0;
 
 // time needed (secs) to generate thing
 time_required_generate = 10;
-amount_generated = 5;
+amount_generated = 1;

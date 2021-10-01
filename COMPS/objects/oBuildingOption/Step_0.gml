@@ -17,7 +17,7 @@ if (global.building_selected) {
 }
 
 if (first_step) {
-	is_multicell = sprite_get_width(sprite) > 64;
+	is_multicell = sprite_get_width(sprite) > 64 || sprite_get_height(sprite) > 64;
 	var unit = 64;
 	
 	with instance_create_layer(x-(unit * 4)*global.zoom, y, "UI", oBuildingPurchase) {
