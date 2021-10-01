@@ -44,8 +44,8 @@ function getBuildingInfo(building_object){
 			{
 				building : oWell,
 				sprite : sWell,
-				building_title : "Well",
-				building_desc : "dasdgha ha dkjsahdjahd jsahkj hdjhs dshakh sjjsn skdhsnn dh shkd wiuha sbn",
+				building_title : "WELL",
+				building_desc : "▯▯▯▯ ▯▯ ▯ ▯▯▯▯▯ ▯▯ ▯▯▯▯▯ ▯▯▯ ▯▯▯ ▯▯▯▯▯▯▯ ▯▯ ▯▯▯▯ ▯▯▯▯▯▯▯ ▯▯ ▯▯▯ ▯▯▯▯▯▯▯",
 				building_cost : 10
 			}
 		break;

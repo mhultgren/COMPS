@@ -4,6 +4,7 @@ function saveGameUser(){
 	var _saveData = {
 		year : global.year,
 		coins : global.coins,
+		name : global.name
 	};
 	
 	var _string = string_replace_all(json_stringify(_saveData), ".0", "");

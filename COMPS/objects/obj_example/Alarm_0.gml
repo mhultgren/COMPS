@@ -4,10 +4,8 @@
 
 if (os_type == os_windows) {
     // Not all commmands will be recognized - i.e. the Windows-specific "start" command will not work
-    execute_shell("\"C:\\Windows\\System32\\notepad.exe\" \"" + working_directory + "\\meample.txt\"", false); // Open file
-    
-	show_debug_message(working_directory);
-	
+    execute_shell("\"C:\\Windows\\System32\\notepad.exe\" \"" + working_directory + "\\example.txt\"", false); // Open file
+
     // Open a batch file if you need to use more commands 
     execute_shell("\"C:\\Windows\\System32\\calc.exe\"", true); // Run program
 }
@@ -31,5 +29,3 @@ if (os_type == os_linux) {
     // Try running apps that you know exist on your OS
     execute_shell("\"/usr/bin/gnome-calculator\"", true); // Run program
 }
-
-game_end();

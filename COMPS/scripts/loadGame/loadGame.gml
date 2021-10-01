@@ -33,6 +33,7 @@ function loadGame(){
 		global.coins = _loadGlobals.coins;
 		global.population = _loadGlobals.population;
 		global.parameters_met = _loadGlobals.parameters_met;
+		global.name = _loadGlobals.name;
 		
 		var _objectsMap = ds_map_create();
 	
@@ -164,7 +165,8 @@ function loadGame(){
 	
 		global.year = _loadData.year;
 		global.coins = _loadData.coins;
+		global.name = _loadData.name;
 	
-		if (_loadData.year == 2434312) game_end();
+		if (_loadData.year >= 3015) room_goto(rm_future);
 	}
 }

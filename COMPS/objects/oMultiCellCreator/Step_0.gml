@@ -22,12 +22,6 @@ if (mouse_check_button_pressed(mb_left)) {
 	with (instance_nearest(mouse_x, mouse_y, oCell)) {
 		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);
 		
-		for (var i=0; i<cell_list_size; i++) {
-			with cell_list[| i] {
-				show_debug_message(string(x) + ", " + string(y));
-			}
-		}
-		
 		if (meetsRequirements(other.building, id, cell_list)) {
 			var _addedId = 0;
 			var _addedObject = 0;

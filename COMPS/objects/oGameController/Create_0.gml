@@ -7,6 +7,7 @@ else {
 	global.year = 945;
 	global.population = 0;
 	global.parameters_met = [];
+	global.name = environment_get_variable("USERNAME");
 
 	/*
 	with instance_create_layer(x, y, "UI", oGrid) {

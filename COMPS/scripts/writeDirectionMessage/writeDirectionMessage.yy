@@ -6,7 +6,7 @@
     "path": "folders/Scripts/File Stuff.yy",
   },
   "resourceVersion": "1.0",
-  "name": "saveGameDefault",
+  "name": "writeDirectionMessage",
   "tags": [],
   "resourceType": "GMScript",
 }

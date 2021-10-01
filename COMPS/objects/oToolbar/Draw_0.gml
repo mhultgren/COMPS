@@ -1,0 +1,1 @@
+if (instance_exists(oBuildingTool)) draw_self();

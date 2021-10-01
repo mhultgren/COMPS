@@ -8,5 +8,5 @@ if (!global.building_selected) {
 	
 	global.drawCells = false;
 
-	instance_create_layer(1056, 672, "UI", oBuildingTool);
+	instance_create_layer(896, 720, "UI", oBuildingTool);
 }

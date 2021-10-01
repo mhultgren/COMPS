@@ -8,7 +8,8 @@ function saveGameDefault(){
 		coins : global.coins,
 		year : global.year,
 		population: global.population,
-		parameters_met : global.parameters_met
+		parameters_met : global.parameters_met,
+		name : global.name
 	}
 
 	array_push(_saveData, _saveGlobals);

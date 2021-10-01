@@ -1,5 +1,5 @@
-x = camera_get_view_x(view_camera[0]) + 1056 * global.zoom;
-y = camera_get_view_y(view_camera[0]) + 672 * global.zoom;
+x = camera_get_view_x(view_camera[0]) + 896 * global.zoom;
+y = camera_get_view_y(view_camera[0]) + 720 * global.zoom;
 
 image_xscale = global.zoom;
 image_yscale = global.zoom;
