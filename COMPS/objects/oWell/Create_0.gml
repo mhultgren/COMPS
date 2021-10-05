@@ -12,6 +12,8 @@ time_left = time_required;
 time_created = unixTimestamp(date_current_datetime());
 time_last_generated = 0;
 
+generates_gold = false;
+
 /*
 var well_id = id;
 

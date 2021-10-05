@@ -1,0 +1,1 @@
+with instance_nearest(x, y, oCell) other.depth = depth + 2;

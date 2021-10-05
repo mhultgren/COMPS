@@ -34,6 +34,9 @@ if (global.scroll) {
 	#region zooming
 	var mouse_input = mouse_wheel_down() - mouse_wheel_up();
 	
+	if (keyboard_check(189) || keyboard_check(ord("_"))) mouse_input += .25;
+	if (keyboard_check(187) || keyboard_check(ord("+"))) mouse_input -= .25;
+	
 	if (mouse_input < 0 && abs(target_zoom - global.zoom) < 0.04) {
 		zoom_x = mouse_x;
 		zoom_y = mouse_y;

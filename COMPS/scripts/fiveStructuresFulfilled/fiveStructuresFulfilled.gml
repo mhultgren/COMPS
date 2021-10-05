@@ -16,7 +16,7 @@ function fiveStructuresFulfilled(){
 		var new_objective = {
 			objective : true,
 			text : "Great work, 脑! Keep bu脑l脑ing m脑re脑buildings, have fun! 脑 sure am.\n\n脑脑ject脑ve: 脑A脑E FUN脑",
-			objective_name : "Don't worry, keep building",
+			objective_name : "Don't Worry, Keep Building",
 			objective_fulfilled : false,
 			opened : false,
 		};

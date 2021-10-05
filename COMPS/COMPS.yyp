@@ -97,6 +97,7 @@
     {"id":{"name":"getBuildingInfo","path":"scripts/getBuildingInfo/getBuildingInfo.yy",},"order":0,},
     {"id":{"name":"oMine","path":"objects/oMine/oMine.yy",},"order":7,},
     {"id":{"name":"meetsRequirements","path":"scripts/meetsRequirements/meetsRequirements.yy",},"order":2,},
+    {"id":{"name":"oGrass","path":"objects/oGrass/oGrass.yy",},"order":8,},
     {"id":{"name":"oWell","path":"objects/oWell/oWell.yy",},"order":3,},
     {"id":{"name":"writeDirectionMessage","path":"scripts/writeDirectionMessage/writeDirectionMessage.yy",},"order":4,},
     {"id":{"name":"testObjectiveFulfilled","path":"scripts/testObjectiveFulfilled/testObjectiveFulfilled.yy",},"order":1,},
@@ -175,7 +176,6 @@
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
-    {"CopyToMask":202375362,"filePath":"datafiles","resourceVersion":"1.0","name":"example.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"example.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {

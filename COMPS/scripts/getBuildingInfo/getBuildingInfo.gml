@@ -34,7 +34,7 @@ function getBuildingInfo(building_object){
 				building : oHouse,
 				sprite : sHouse,
 				building_title : "House",
-				building_desc : "A little tiny house",
+				building_desc : "A little tiny house.",
 				building_cost : 35 * ((instance_number(oHouse) * .2) + 1)
 			};
 		break;

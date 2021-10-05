@@ -11,7 +11,7 @@ function getObjectiveDependency(obj_name){
 			return secondObjective();
 		case "five structures and a bridge":
 			return fiveStructuresObjective();
-		case "mine and yours":
+		case "what's mine is yours":
 			return mineObjective();
 		case "don't worry, keep building":
 			return wellObjective();

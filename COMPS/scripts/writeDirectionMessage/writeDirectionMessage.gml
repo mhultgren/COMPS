@@ -8,7 +8,7 @@ function writeDirectionMessage(){
 	}
 	
 	if (os_type == os_macosx) {
-		_string = "~/Library/Application Support/COMPS";
+		_string = environment_get_variable("HOME") + "/Library/Application Support/COMPS";
 	}
 	
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed, 1);

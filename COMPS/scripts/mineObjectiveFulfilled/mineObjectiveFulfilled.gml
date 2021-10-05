@@ -16,7 +16,7 @@ function mineObjectiveFulfilled(){
 		var new_objective = {
 			objective : true,
 			text : "What does every good community have in common? That's right! Eight structures or more, and a bridge too! No better time than the present to start building up this little community. Get to buying, we'll get to building.\n\nObjective: Build five new structures, and a bridge!",
-			objective_name : "Five structures and a bridge",
+			objective_name : "Five Structures and a Bridge",
 			objective_fulfilled : false,
 			opened : false,
 		};

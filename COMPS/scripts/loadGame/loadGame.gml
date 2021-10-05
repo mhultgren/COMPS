@@ -14,6 +14,7 @@ function loadGame(){
 	instance_destroy(oWater);
 	instance_destroy(oStructure);
 	instance_destroy(oGrid);
+	instance_destroy(oGrass);
 	instance_destroy(oBuildingMenu);
 	instance_destroy(oCreator);
 	instance_destroy(oAlertToolbar);

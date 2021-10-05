@@ -7,7 +7,9 @@ else {
 	global.year = 945;
 	global.population = 0;
 	global.parameters_met = [];
-	global.name = environment_get_variable("USERNAME");
+	
+	if (os_type == os_windows) global.name = environment_get_variable("USERNAME");
+	if (os_type == os_macosx) global.name = environment_get_variable("USER");
 
 	/*
 	with instance_create_layer(x, y, "UI", oGrid) {
