@@ -168,6 +168,9 @@ function loadGame(){
 		global.coins = _loadData.coins;
 		global.name = _loadData.name;
 	
-		if (_loadData.year >= 3015) room_goto(rm_future);
+		if (_loadData.year >= 3015) {
+			audio_stop_all();
+			room_goto(rm_future);
+		}
 	}
 }

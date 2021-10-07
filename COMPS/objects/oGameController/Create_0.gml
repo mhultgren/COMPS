@@ -31,4 +31,5 @@ else {
 	instance_create_layer(1280, 128, "UI", oAlertToolbar);
 }
 
+instance_create_layer(x, y, "UI", oYearDisplay);
 instance_create_layer(1216, 32, "UI", oGameInfo);

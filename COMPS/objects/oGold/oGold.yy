@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sBoatHouse",
-    "path": "sprites/sBoatHouse/sBoatHouse.yy",
+    "name": "sGold",
+    "path": "sprites/sGold/sGold.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oBuilding",
-    "path": "objects/oBuilding/oBuilding.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,15 +23,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Buildings",
-    "path": "folders/Objects/Structures/Buildings.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBoatHouse",
+  "name": "oGold",
   "tags": [],
   "resourceType": "GMObject",
 }
