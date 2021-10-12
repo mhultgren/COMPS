@@ -46,7 +46,7 @@ function getBuildingInfo(building_object){
 				sprite : sWell,
 				building_title : "WELL",
 				building_desc : "▯▯▯▯ ▯▯ ▯ ▯▯▯▯▯ ▯▯ ▯▯▯▯▯ ▯▯▯ ▯▯▯ ▯▯▯▯▯▯▯ ▯▯ ▯▯▯▯ ▯▯▯▯▯▯▯ ▯▯ ▯▯▯ ▯▯▯▯▯▯▯",
-				building_cost : 750
+				building_cost : 300
 			}
 		break;
 		
@@ -56,7 +56,7 @@ function getBuildingInfo(building_object){
 				building : oBridge,
 				sprite : sBridge,
 				building_title : "Bridge",
-				building_desc : "A river runs underneath it. Give your residents the ability to see whether the grass is truly greener!",
+				building_desc : "A river runs underneath it. Give your residents the ability to see whether the grass is truly greener!\n\nNote: bridges must be built over water!",
 				building_cost : 70,
 			}
 		break;

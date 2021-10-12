@@ -11,7 +11,7 @@ function getUnlockedBuildings(){
 	if (array_contains(global.parameters_met, "tutorial alert sent")) array_push(returned_buildings, oHouse);
 	if (array_contains(global.parameters_met, "second objective met")) array_push(returned_buildings, oMine);
 	if (array_contains(global.parameters_met, "mine objective met")) array_push(returned_buildings, oBoatHouse, oStorehouse, oBridge);
-	if (array_contains(global.parameters_met, "five structures objective met") && !instance_exists(oWell)) returned_buildings = [oWell];
+	if (array_contains(global.parameters_met, "five structures objective met") && !instance_exists(oWell)) array_push(returned_buildings, oWell);
 	
 	return returned_buildings;
 }
