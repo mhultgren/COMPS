@@ -46,6 +46,16 @@ if (mouse_check_button_pressed(mb_left)) {
 					}
 				}
 			}
+			
+			if (instance_exists(oFlora)) {
+				var flora_depth = 0;
+				
+				with instance_nearest(x + sprite_width*.5, y + sprite_height + 20, oFlora) flora_depth = depth;
+				
+				with _addedObject {
+					depth = flora_depth - 1;
+				}
+			}
 				
 			global.building_selected = false;
 			saveGameDefault();

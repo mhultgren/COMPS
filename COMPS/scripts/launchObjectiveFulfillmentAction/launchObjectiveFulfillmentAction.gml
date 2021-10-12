@@ -3,7 +3,7 @@
 function launchObjectiveFulfillmentAction(obj_name){
 	switch (string_lower(obj_name)) {
 		case "test objective": testObjectiveFulfilled(); break;
-		case "welcome to game title!": firstObjectiveFulfilled(); break;
+		case "welcome to happy pastures!": firstObjectiveFulfilled(); break;
 		case "a brief wait": secondObjectiveFulfilled(); break;
 		case "what's mine is yours": mineObjectiveFulfilled(); break;
 		case "five structures and a bridge": fiveStructuresFulfilled(); break;

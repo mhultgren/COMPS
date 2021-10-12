@@ -89,7 +89,7 @@ function getBuildingInfo(building_object){
 				building : oStorehouse,
 				sprite : sStorehouse,
 				building_title : "Storehouse",
-				building_desc : "A well functioning society should have a place to store their food, wouldn't you think? Everybody needs to eat, and the people of GAME TITLE tend to be a hungry bunch.",
+				building_desc : "A well functioning society should have a place to store their food, wouldn't you think? Everybody needs to eat, and the people of Happy Pastures tend to be a hungry bunch.",
 				building_cost : 100 * ((instance_number(oStorehouse) * .2) + 1),
 			}
 		break;

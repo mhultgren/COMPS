@@ -6,7 +6,7 @@ function firstObjectiveFulfilled(){
 		objective = true;
 		objective_name = "A Brief Wait";
 		objective_fulfilled = false;
-		dialogue_text = "Great work, and now the waiting starts! Thankfully, this should be done soon. Just 30 seconds...\n\nObjective: wait until construction ends";
+		dialogue_text = "Great work, and now the waiting starts! Thankfully, this should be done soon. Just 30 seconds...\n\nObjective: wait until construction ends\n\nNote: you can stop building creation at any time by pressing the ESC button!";
 		add_to_toolbar = true;
 		alert_index = 0;
 	}

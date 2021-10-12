@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "placeholder_ost.mp3",
-  "duration": 0.0,
+  "duration": 116.564171,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

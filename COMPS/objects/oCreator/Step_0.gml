@@ -21,17 +21,25 @@ if (mouse_check_button_pressed(mb_left)) {
 			var _addedId = 0;
 			var _addedObject = 0;
 			
+			if (contains_flora) {
+				with instance_nearest(x, y, oFlora) instance_destroy();
+			}
+			
 			with instance_create_layer(x, y, "Buildings", other.building) {
 				_addedObject = object_index;
 				_addedId = id;
+				
+				var flora_depth = 0;
+				
+				if (instance_exists(oFlora)) {
+					with instance_nearest(x, y+32, oFlora) flora_depth = depth;
+				}
+				
+				depth = flora_depth - 1;
 			}
 			
 			object_contained = _addedObject;
 			object_id = _addedId;
-				
-			if (contains_flora) {
-				with instance_nearest(x, y, oFlora) instance_destroy();
-			}
 				
 			global.building_selected = false;
 			saveGameDefault();
