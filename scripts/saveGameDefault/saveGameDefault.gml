@@ -18,9 +18,9 @@ function saveGameDefault(){
 	var _saveObjects = array_create(0);
 
 	with (oGrid) {
-		for (var i=0; i<cells_height; i++) {
-			for (var j=0; j<cells_width; j++) {
-				with (cells[i, j]) {
+		for (var i=0; i<global.cells_height; i++) {
+			for (var j=0; j<global.cells_width; j++) {
+				with (global.cells[i, j]) {
 					var _saveCell = {
 						obj : object_get_name(object_index),
 						x : x,

@@ -4,5 +4,3 @@ prev_depth = depth;
 
 cell_group = 0;
 cell_group_selected = false;
-
-instance_create_layer(x, y, "Buildings", oGrass);

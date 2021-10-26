@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sGrass",
-    "path": "sprites/sGrass/sGrass.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

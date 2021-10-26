@@ -1,0 +1,1 @@
+draw_sprite(sWaterTile, 0, tile_to_screen_x(x, y), tile_to_screen_y(x, y));

@@ -47,13 +47,13 @@ function loadGame(){
 		var _cellCount = 0;
 		var row = 0;
 	
-		var _grid = instance_create_layer(x, y, "UI", oGrid);
+		var _grid = instance_create_layer(x, y, "Grid", oGrid);
 		instance_destroy(oCell);
 	
 		var _cellsPerRow = 0;
 		var _objectsSeen = {};
 	
-		with (_grid) _cellsPerRow = cells_width;
+		with (_grid) _cellsPerRow = global.cells_width;
 	
 		for (var col=0; col<array_length(_loadGrid); col++) {
 			if (_cellCount == _cellsPerRow) {
@@ -146,7 +146,7 @@ function loadGame(){
 			_cellCount++;
 		}
 	
-		with (_grid) cells = _cells;
+		with (_grid) global.cells = _cells;
 	
 		with instance_create_layer(1280, 128, "UI", oAlertToolbar) {
 			alerts = _loadAlerts;

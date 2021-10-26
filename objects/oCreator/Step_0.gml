@@ -13,10 +13,8 @@ if (keyboard_check_pressed(vk_escape)) {
 	instance_destroy();
 }
 
-// TODO: change position meeting to apply to other things/ui elements which should not be built upon
-if (mouse_check_button_pressed(mb_left)) {
-		
-	with (instance_nearest(mouse_x, mouse_y, oCell)) {
+if (mouse_check_button_pressed(mb_left) && within_bounds) {
+	with (global.cells[iso_mouse_x, iso_mouse_y]) {
 		if (meetsRequirements(other.building, id, 0)) {
 			var _addedId = 0;
 			var _addedObject = 0;
@@ -58,3 +56,8 @@ if (mouse_check_button_pressed(mb_left)) {
 	}
 		
 }
+
+iso_mouse_x = screen_to_tile_x(mouse_x, mouse_y);
+iso_mouse_y = screen_to_tile_y(mouse_x, mouse_y);
+
+within_bounds = (iso_mouse_x >= 0 && iso_mouse_x < global.cells_height) && (iso_mouse_y >= 0 && iso_mouse_y < global.cells_width);

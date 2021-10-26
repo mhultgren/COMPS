@@ -13,13 +13,12 @@ if (keyboard_check_pressed(vk_escape)) {
 	instance_destroy();
 }
 
-if (mouse_check_button_pressed(mb_left)) {
+if (mouse_check_button_pressed(mb_left) && within_bounds) {	
 	var cell_list = ds_list_create();
 	var struct_width = sprite_get_width(sprite);
 	var struct_height = sprite_get_height(sprite);
-		
 	
-	with (instance_nearest(mouse_x, mouse_y, oCell)) {
+	with (global.cells[iso_mouse_x, iso_mouse_y]) {
 		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);
 		
 		if (meetsRequirements(other.building, id, cell_list)) {
@@ -47,6 +46,7 @@ if (mouse_check_button_pressed(mb_left)) {
 				}
 			}
 			
+			/*
 			if (instance_exists(oFlora)) {
 				var flora_depth = 0;
 				
@@ -56,6 +56,7 @@ if (mouse_check_button_pressed(mb_left)) {
 					depth = flora_depth - 1;
 				}
 			}
+			*/
 				
 			global.building_selected = false;
 			saveGameDefault();
@@ -74,3 +75,6 @@ if (mouse_check_button_pressed(mb_left)) {
 	}
 		
 }
+
+iso_mouse_x = screen_to_tile_x(mouse_x, mouse_y);
+iso_mouse_y = screen_to_tile_y(mouse_x, mouse_y);

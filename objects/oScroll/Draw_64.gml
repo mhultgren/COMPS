@@ -27,7 +27,10 @@ if (global.scroll) {
 		yy += view_move_amount;
 	}
 
-	camera_set_view_pos(view_camera[0], clamp(xx, 0, room_width-camera_get_view_width(view_camera[0])), clamp(yy, 0, room_height-camera_get_view_height(view_camera[0])));
+	// clamp(xx, 0, room_width-camera_get_view_width(view_camera[0]))
+	// clamp(yy, 0, room_height-camera_get_view_height(view_camera[0]))
+
+	camera_set_view_pos(view_camera[0], xx, yy);
 	#endregion
 	
 	//TODO: scroll towards mouse position

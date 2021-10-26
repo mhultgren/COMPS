@@ -17,3 +17,5 @@ target_zoom = global.zoom;
 zoom_spd = 0.1;
 zoom_x = room_width / 2;
 zoom_y = room_width / 2;
+
+camera_set_view_pos(view_camera[0], 655, 310);
