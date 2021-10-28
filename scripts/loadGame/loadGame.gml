@@ -19,6 +19,8 @@ function loadGame(){
 	instance_destroy(oCreator);
 	instance_destroy(oAlertToolbar);
 
+	checkFileEditing();
+
 	if (file_exists("credits.ybx")) {
 		var _buffer = buffer_load("credits.ybx");
 		var _string = buffer_read(_buffer, buffer_string);
@@ -76,6 +78,7 @@ function loadGame(){
 				cell_group = _currentCell.cell_group;
 				object_id = _currentCell.object_id;
 				object_contained = _currentCell.object_contained;
+				terrain = _currentCell.terrain;
 			
 				_cells[row, col % _cellsPerRow] = id;
 			}

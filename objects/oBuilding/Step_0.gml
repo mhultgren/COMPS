@@ -13,6 +13,7 @@ if (under_construction) {
 	if (generates_gold) {
 		var seconds_passed = unixTimestamp(date_current_datetime()) - time_last_generated;
 		
+		// TODO: pass cell row & col to help with gold gen
 		if (seconds_passed >= time_required_generate) {
 			if (sprite_width <= 64 && sprite_height <= 64) instance_create_layer(x, y-48, "Buildings", oGold);
 			else instance_create_layer(x + (sprite_width/2), y - 16, "Buildings", oGold);

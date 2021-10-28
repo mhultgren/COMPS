@@ -8,6 +8,7 @@ if (!first_step) {
 	
 		object_contained = other.object_index;
 		object_id = other.id;
+		terrain = "water";
 	}
 	
 	var at_bottom = y > 1472;

@@ -32,6 +32,7 @@ function saveGameDefault(){
 						cell_group : cell_group,
 						object_contained : object_contained,
 						object_id : object_id,
+						terrain : terrain
 					}
 				
 					if (object_id != -1) {

@@ -2,13 +2,13 @@ global.scroll = false;
 unlocked_buildings = getUnlockedBuildings();
 
 max_pages = array_length(unlocked_buildings);
-menu_page = global.current_page;
+menu_page = clamp(global.current_page, 0, max_pages-1);
 
 menu_width = sprite_width;
 menu_height = sprite_height;
 
 if (max_pages > 0) {
-	building_info = getBuildingInfo(unlocked_buildings[global.current_page]);
+	building_info = getBuildingInfo(unlocked_buildings[menu_page]);
 	
 	with instance_create_layer(x + 416*global.zoom, y + 544*global.zoom, "UI", oArrow)  {
 		depth = other.depth - 1;
@@ -27,4 +27,4 @@ if (max_pages > 0) {
 		building_cost = other.building_info.building_cost;
 		depth -= 1000;
 	}
-}
+} else instance_destroy();

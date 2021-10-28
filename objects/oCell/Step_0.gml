@@ -9,7 +9,13 @@ if (!instance_exists(oMultiCellCreator)) {
 		
 		if (iso_mouse_x == cell_row && iso_mouse_y == cell_column) {
 			var creator_building = 0;
-		
+			
+			if (contains_flora) {
+				with object_contained {
+					image_index = red_index;
+				}
+			}
+			
 			with oCreator {
 				creator_building = building;
 			}
@@ -17,6 +23,12 @@ if (!instance_exists(oMultiCellCreator)) {
 			if (!meetsRequirements(creator_building, id, 0)) image_index = 2;
 			else image_index = 1;
 		} else {
+			if (contains_flora) {
+				with object_contained {
+					image_index = normal_index;
+				}
+			}
+			
 			image_index = 0;
 		}
 	}
@@ -36,11 +48,24 @@ if (!instance_exists(oMultiCellCreator)) {
 	
 	var is_in_rectangle = (cell_row >= iso_mouse_x && cell_row < iso_mouse_x + multi_cell_sprite_width) && (cell_column >= iso_mouse_y && cell_column < iso_mouse_y + multi_cell_sprite_height);
 	
-	// TODO: make multi cell use meetsRequirements()
 	if (is_in_rectangle) {
+		if (contains_flora) {
+			with object_contained {
+				image_index = red_index;
+			}
+		}
+		
 		if (contains_structure || contains_water) image_index = 2;
 		else image_index = 1;
-	} else image_index = 0;
+	} else {
+		if (contains_flora) {
+			with object_contained {
+				image_index = normal_index;
+			}
+		}
+		
+		image_index = 0;
+	}
 }
 
 if (cell_group_selected) {
