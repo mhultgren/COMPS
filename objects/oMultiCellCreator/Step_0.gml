@@ -15,8 +15,9 @@ if (keyboard_check_pressed(vk_escape)) {
 
 if (mouse_check_button_pressed(mb_left) && within_bounds) {	
 	var cell_list = ds_list_create();
-	var struct_width = sprite_get_width(sprite);
-	var struct_height = sprite_get_height(sprite);
+	var building_size = getBuildingSize(building);
+	var struct_width = building_size[0];
+	var struct_height = building_size[1];
 	
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
 		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);

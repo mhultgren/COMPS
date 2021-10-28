@@ -5,7 +5,7 @@ function saveGameDefault(){
 
 	// save global variables, cells
 	var _saveGlobals = {
-		coins : global.coins,
+		gold : global.coins,
 		year : global.year,
 		population: global.population,
 		parameters_met : global.parameters_met,

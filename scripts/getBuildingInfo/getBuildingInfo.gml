@@ -35,7 +35,7 @@ function getBuildingInfo(building_object){
 				sprite : sHouse,
 				building_title : "House",
 				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oHouse) * .2) + 1)
+				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
 			};
 		break;
 		
@@ -89,7 +89,7 @@ function getBuildingInfo(building_object){
 				building : oStorehouse,
 				sprite : sStorehouse,
 				building_title : "Storehouse",
-				building_desc : "A well functioning society should have a place to store their food, wouldn't you think? Everybody needs to eat, and the people of Happy Pastures tend to be a hungry bunch.",
+				building_desc : "A well functioning society should have a place to store their food, wouldn't you agree? Everybody needs to eat, and the people of Happy Pastures tend to be a hungry bunch.",
 				building_cost : 100 * ((instance_number(oStorehouse) * .2) + 1),
 			}
 		break;

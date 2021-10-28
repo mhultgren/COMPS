@@ -26,8 +26,6 @@ for (var tX=0; tX<global.cells_height; tX++) {
 		room_y = tile_to_screen_y(tX, tY);
 		
 		with (global.cells[tX, tY]) {
-			// TODO: get sprite subimage
-			// TODO: multi cell creation, drawing
 			if (cell_group) {
 				if (ds_list_find_index(other.multicells, object_id) == -1) {
 					with object_id {

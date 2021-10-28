@@ -4,7 +4,8 @@ function bridgeRequirements(cell_group){
 	if (ds_list_size(cell_group) != 3) return false;
 	
 	with cell_group[| 0] {
-		if (contains_structure || contains_water) return false;
+		if (contains_water) return false;
+		if (contains_structure && object_contained != oBridge) return false;
 	}
 	
 	with cell_group[| 1] {
@@ -12,7 +13,8 @@ function bridgeRequirements(cell_group){
 	}
 	
 	with cell_group[| 2] {
-		if (contains_structure || contains_water) return false;
+		if (contains_water) return false;
+		if (contains_structure && object_contained != oBridge) return false;
 	}
 	
 	return true;

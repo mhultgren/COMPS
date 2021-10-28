@@ -19,8 +19,6 @@ function loadGame(){
 	instance_destroy(oCreator);
 	instance_destroy(oAlertToolbar);
 
-	checkFileEditing();
-
 	if (file_exists("credits.ybx")) {
 		var _buffer = buffer_load("credits.ybx");
 		var _string = buffer_read(_buffer, buffer_string);
@@ -33,7 +31,7 @@ function loadGame(){
 		var _loadObjects = _loadData[2];
 		var _loadAlerts = _loadData[3];
 	
-		global.coins = _loadGlobals.coins;
+		global.coins = _loadGlobals.gold;
 		global.population = _loadGlobals.population;
 		global.parameters_met = _loadGlobals.parameters_met;
 		global.name = _loadGlobals.name;
@@ -168,7 +166,7 @@ function loadGame(){
 		var _loadData = json_parse(_string);
 	
 		global.year = _loadData.year;
-		global.coins = _loadData.coins;
+		global.coins = _loadData.gold;
 		global.name = _loadData.name;
 	
 		if (_loadData.year >= 3015) {
@@ -176,4 +174,6 @@ function loadGame(){
 			room_goto(rm_test_end);
 		}
 	}
+	
+	checkFileEditing();
 }

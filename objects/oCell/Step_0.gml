@@ -36,15 +36,14 @@ if (!instance_exists(oMultiCellCreator)) {
 	var iso_mouse_x = screen_to_tile_x(mouse_x, mouse_y);
 	var iso_mouse_y = screen_to_tile_y(mouse_x, mouse_y);
 	
-	var multi_cell_sprite_width = 0;
-	var multi_cell_sprite_height = 0;
-	var multi_cell_building = 0;
+	var multi_cell_sprite_width, multi_cell_sprite_height, building_size;
 	
 	with oMultiCellCreator {
-		multi_cell_sprite_width = sprite_get_width(sprite)/64;
-		multi_cell_sprite_height = sprite_get_height(sprite)/64;
-		multi_cell_building = building;
+		building_size = getBuildingSize(building);
 	}
+	
+	multi_cell_sprite_width = building_size[0]/64;
+	multi_cell_sprite_height = building_size[1]/64;
 	
 	var is_in_rectangle = (cell_row >= iso_mouse_x && cell_row < iso_mouse_x + multi_cell_sprite_width) && (cell_column >= iso_mouse_y && cell_column < iso_mouse_y + multi_cell_sprite_height);
 	

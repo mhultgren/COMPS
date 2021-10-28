@@ -101,6 +101,7 @@
     {"id":{"name":"oBuildingMenu","path":"objects/oBuildingMenu/oBuildingMenu.yy",},"order":1,},
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"order":0,},
     {"id":{"name":"tile_to_screen_x","path":"scripts/tile_to_screen_x/tile_to_screen_x.yy",},"order":16,},
+    {"id":{"name":"getBuildingSize","path":"scripts/getBuildingSize/getBuildingSize.yy",},"order":5,},
     {"id":{"name":"oGold","path":"objects/oGold/oGold.yy",},"order":16,},
     {"id":{"name":"testObjective","path":"scripts/testObjective/testObjective.yy",},"order":0,},
     {"id":{"name":"sArrow","path":"sprites/sArrow/sArrow.yy",},"order":6,},

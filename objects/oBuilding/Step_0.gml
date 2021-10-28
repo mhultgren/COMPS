@@ -15,8 +15,10 @@ if (under_construction) {
 		
 		// TODO: pass cell row & col to help with gold gen
 		if (seconds_passed >= time_required_generate) {
-			if (sprite_width <= 64 && sprite_height <= 64) instance_create_layer(x, y-48, "Buildings", oGold);
-			else instance_create_layer(x + (sprite_width/2), y - 16, "Buildings", oGold);
+			var building_size = getBuildingSize(object_index);
+			
+			if (building_size[0] <= 64 && building_size[1] <= 64) instance_create_layer(x, y-48, "Buildings", oGold);
+			else instance_create_layer(x + (building_size[0]/2), y - 16, "Buildings", oGold);
 			
 			var num_to_generate = floor(seconds_passed / time_required_generate);
 			global.coins += amount_generated * num_to_generate;

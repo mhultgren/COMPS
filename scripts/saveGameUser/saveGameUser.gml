@@ -3,7 +3,7 @@
 function saveGameUser(){
 	var _saveData = {
 		year : global.year,
-		coins : global.coins,
+		gold : global.coins,
 		name : global.name
 	};
 	
