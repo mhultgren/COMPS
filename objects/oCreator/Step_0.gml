@@ -15,9 +15,11 @@ if (keyboard_check_pressed(vk_escape)) {
 
 if (mouse_check_button_pressed(mb_left) && within_bounds) {
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
-		if (meetsRequirements(other.building, id, 0)) {
+		if (meetsRequirements(other.building, id, -1)) {
 			var _addedId = 0;
 			var _addedObject = 0;
+			var _cellRow = other.iso_mouse_x;
+			var _cellCol = other.iso_mouse_y;
 			
 			if (contains_flora) {
 				with instance_nearest(x, y, oFlora) instance_destroy();
@@ -26,6 +28,9 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 			with instance_create_layer(x, y, "Buildings", other.building) {
 				_addedObject = object_index;
 				_addedId = id;
+				
+				parent_cell_row = _cellRow;
+				parent_cell_col = _cellCol;
 				
 				var flora_depth = 0;
 				

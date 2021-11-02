@@ -29,7 +29,7 @@ if (new_length != alerts_size) {
 		}
 	}
 	
-	saveGameDefault();
+	//saveGameDefault();
 }
 
 alerts_size = new_length;

@@ -18,6 +18,8 @@ function loadGame(){
 	instance_destroy(oBuildingMenu);
 	instance_destroy(oCreator);
 	instance_destroy(oAlertToolbar);
+	
+	var cell_groups = ds_map_create();
 
 	if (file_exists("credits.ybx")) {
 		var _buffer = buffer_load("credits.ybx");
@@ -64,6 +66,7 @@ function loadGame(){
 			// save cell reference, so it can be used with creating objects
 			var _currentCell = _loadGrid[col];
 			var _createdCell = instance_create_layer(_currentCell.x, _currentCell.y, "Buildings", oCell);
+			var _createdCellId = 0;
 		
 			with _createdCell {
 				x = _currentCell.x;
@@ -78,7 +81,29 @@ function loadGame(){
 				object_contained = _currentCell.object_contained;
 				terrain = _currentCell.terrain;
 			
+				_createdCellId = id;
 				_cells[row, col % _cellsPerRow] = id;
+			}
+			
+			if (_currentCell.cell_group != -1 && !ds_map_exists(cell_groups, _currentCell.cell_group)) {
+				var _newCellGroup = 0;
+				
+				with instance_create_layer(_currentCell.x, _currentCell.y, "UI", oCellGroup) {
+					_newCellGroup = id;
+				}
+				
+				cell_groups[? _currentCell.cell_group] = _newCellGroup;
+			}
+			
+			if (_currentCell.cell_group != -1) {
+				with _createdCell {
+					cell_group = cell_groups[? _currentCell.cell_group];
+				}
+				
+				with cell_groups[? _currentCell.cell_group] {
+					ds_list_add(cell_group, _createdCellId);
+					cell_group_size++;
+				}
 			}
 		
 			// tie object to cell, if exists
@@ -101,6 +126,8 @@ function loadGame(){
 							time_required = _currentObject.time_required;
 							time_last_generated = _currentObject.time_last_generated;
 							just_constructed = _currentObject.just_constructed;
+							parent_cell_row = _currentObject.parent_cell_row;
+							parent_cell_col = _currentObject.parent_cell_col;
 					
 							_newId = id;
 							_objectIndex = object_index;
@@ -169,11 +196,18 @@ function loadGame(){
 		global.coins = _loadData.gold;
 		global.name = _loadData.name;
 	
-		if (_loadData.year >= 3015) {
-			audio_stop_all();
-			room_goto(rm_test_end);
+		if (_loadData.year >= 3015 && !array_contains(global.parameters_met, "future unlocked")) {
+			createFutureObjective();
 		}
 	}
 	
 	checkFileEditing();
+	
+	if (array_contains(global.parameters_met, "death clock on")) {
+			activateDeathClock();
+	} else {
+		array_push(global.parameters_met, "death clock on");
+	}
+	
+	ds_map_destroy(cell_groups);
 }

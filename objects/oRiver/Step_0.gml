@@ -6,8 +6,8 @@ if (!first_step) {
 			instance_destroy(object_id);
 		}
 	
-		object_contained = other.object_index;
-		object_id = other.id;
+		object_contained = -1;
+		object_id = -1;
 		terrain = "water";
 	}
 	

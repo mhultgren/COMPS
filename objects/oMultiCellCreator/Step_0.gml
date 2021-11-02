@@ -18,6 +18,8 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 	var building_size = getBuildingSize(building);
 	var struct_width = building_size[0];
 	var struct_height = building_size[1];
+	var cell_row = iso_mouse_x;
+	var cell_col = iso_mouse_y;
 	
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
 		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);
@@ -29,6 +31,8 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 			with instance_create_layer(x-32, y-32, "Buildings", other.building) {
 				_addedObject = object_index;
 				_addedId = id;
+				parent_cell_row = cell_row;
+				parent_cell_col = cell_col;
 			}
 			
 			with instance_create_layer(x-32, y-32, "UI", oCellGroup) {

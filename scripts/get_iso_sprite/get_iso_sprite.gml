@@ -4,6 +4,7 @@ function get_iso_sprite(object_id){
 	with object_id {
 		if (global.year < 3015) {
 			switch (object_index) {
+				case oCell			: return sCell;
 				case oTree			: return sTree;
 				case oMine			: return sMine;
 				case oWell			: return sWell;
@@ -16,6 +17,7 @@ function get_iso_sprite(object_id){
 			}
 		} else {
 			switch (object_index) {
+				case oCell			: return sCell;
 				case oTree			: return sTree;
 				case oMine			: return sMine;
 				case oWell			: return sWell;
@@ -27,7 +29,7 @@ function get_iso_sprite(object_id){
 				case oTutorialHouse : return sTutorialHouse;
 			}
 		}
+		
+		show_debug_message(object_get_name(object_index));
 	}
-	
-	show_debug_message(object_get_name(object_index));
 }
