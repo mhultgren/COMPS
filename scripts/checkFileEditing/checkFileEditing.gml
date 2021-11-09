@@ -1,7 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-
-// TODO: destroy cells for year >= 3015
 function checkFileEditing(){
 	if (file_exists("credits.ybx") && file_exists("save.txt")) {
 		var main_buffer = buffer_load("credits.ybx");
@@ -29,6 +25,10 @@ function checkFileEditing(){
 			with oAlertToolbar {
 				array_insert(alerts, 0, alert_info);
 			}
+		}
+	
+		if (array_contains(global.parameters_met, "create folder desc") && array_contains_insensitive(variable_struct_get_names(user_data), "power")) {
+			if (!array_contains(global.parameters_met, "turn on clock")) array_push(global.parameters_met, "turn on clock");
 		}
 	}
 }

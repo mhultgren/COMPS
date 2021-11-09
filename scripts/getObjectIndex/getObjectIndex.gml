@@ -20,5 +20,13 @@ function getObjectIndex(obj_index){
 			return oBoatHouse;
 		case "oStorehouse":
 			return oStorehouse;
+		case "oFuturePlaceholderOne":
+			return oFuturePlaceholderOne;
+		case "oFuturePlaceholderTwo":
+			return oFuturePlaceholderTwo;
+		case "oFuturePlaceholderThree":
+			return oFuturePlaceholderThree;
+		case "oFuturePlaceholderFour":
+			return oFuturePlaceholderFour;
 	}
 }

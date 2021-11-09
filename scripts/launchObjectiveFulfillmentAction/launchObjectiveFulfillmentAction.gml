@@ -8,5 +8,6 @@ function launchObjectiveFulfillmentAction(obj_name){
 		case "what's mine is yours": mineObjectiveFulfilled(); break;
 		case "five structures and a bridge": fiveStructuresFulfilled(); break;
 		case "don't worry, keep building": wellObjectiveFulfilled(); break;
+		case "welcome back": firstFutureObjectiveFulfilled(); break;
 	}
 }

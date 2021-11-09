@@ -15,6 +15,7 @@ if (keyboard_check_pressed(vk_escape)) {
 
 if (mouse_check_button_pressed(mb_left) && within_bounds) {
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
+		show_debug_message(terrain);
 		if (meetsRequirements(other.building, id, -1)) {
 			var _addedId = 0;
 			var _addedObject = 0;

@@ -37,6 +37,8 @@ function loadGame(){
 		global.population = _loadGlobals.population;
 		global.parameters_met = _loadGlobals.parameters_met;
 		global.name = _loadGlobals.name;
+		global.death_clock_time = _loadGlobals.death_clock_time;
+		global.death_clock_last_time = _loadGlobals.death_clock_last_time;
 		
 		var _objectsMap = ds_map_create();
 	
@@ -204,9 +206,7 @@ function loadGame(){
 	checkFileEditing();
 	
 	if (array_contains(global.parameters_met, "death clock on")) {
-			activateDeathClock();
-	} else {
-		array_push(global.parameters_met, "death clock on");
+		activateDeathClock();
 	}
 	
 	ds_map_destroy(cell_groups);

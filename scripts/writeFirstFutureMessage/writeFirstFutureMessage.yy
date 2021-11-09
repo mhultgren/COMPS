@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Objective Creation",
-    "path": "folders/Scripts/Objectives/Objective Creation.yy",
+    "name": "File Stuff",
+    "path": "folders/Scripts/File Stuff.yy",
   },
   "resourceVersion": "1.0",
-  "name": "createFutureObjective",
+  "name": "writeFirstFutureMessage",
   "tags": [],
   "resourceType": "GMScript",
 }

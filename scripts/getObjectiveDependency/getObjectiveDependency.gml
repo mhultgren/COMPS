@@ -15,5 +15,7 @@ function getObjectiveDependency(obj_name){
 			return mineObjective();
 		case "don't worry, keep building":
 			return wellObjective();
+		case "welcome back":
+			return firstFutureObjective();
 	}
 }

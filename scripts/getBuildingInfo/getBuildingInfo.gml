@@ -93,6 +93,50 @@ function getBuildingInfo(building_object){
 				building_cost : 100 * ((instance_number(oStorehouse) * .2) + 1),
 			}
 		break;
+		
+		case oFuturePlaceholderOne:
+			building_struct =
+			{
+				building : oFuturePlaceholderOne,
+				sprite : sHouse,
+				building_title : "ONE",
+				building_desc : "A little tiny house.",
+				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+			}
+		break;
+		
+		case oFuturePlaceholderTwo:
+			building_struct =
+			{
+				building : oFuturePlaceholderTwo,
+				sprite : sHouse,
+				building_title : "TWO",
+				building_desc : "A little tiny house.",
+				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+			}
+		break;
+		
+		case oFuturePlaceholderThree:
+			building_struct =
+			{
+				building : oFuturePlaceholderThree,
+				sprite : sHouse,
+				building_title : "THREE",
+				building_desc : "A little tiny house.",
+				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+			}
+		break;
+		
+		case oFuturePlaceholderFour:
+			building_struct =
+			{
+				building : oFuturePlaceholderFour,
+				sprite : sHouse,
+				building_title : "FOUR",
+				building_desc : "A little tiny house.",
+				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+			}
+		break;
 	}
 	
 	return building_struct;

@@ -20,7 +20,7 @@ if (add_to_toolbar) {
 	with oAlertToolbar {
 		array_insert(alerts, other.alert_index, alert_info);
 	}
-} else {
+} else if (!destroy_on_close) {
 	with oAlertToolbar {
 		alerts[other.alert_index].opened = true;
 	}

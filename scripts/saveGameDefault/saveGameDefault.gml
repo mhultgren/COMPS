@@ -9,7 +9,9 @@ function saveGameDefault(){
 		year : global.year,
 		population: global.population,
 		parameters_met : global.parameters_met,
-		name : global.name
+		name : global.name,
+		death_clock_last_time : global.death_clock_last_time,
+		death_clock_time : global.death_clock_time
 	}
 
 	array_push(_saveData, _saveGlobals);

@@ -1,4 +1,5 @@
 draw_set_font(fMain);
+check_clock = false;
 
 if (file_exists("credits.ybx")) loadGame();
 else {
@@ -7,6 +8,8 @@ else {
 	global.year = 945;
 	global.population = 0;
 	global.parameters_met = [];
+	global.death_clock_time = 0;
+	global.death_clock_last_time = 0;
 	
 	if (os_type == os_windows) global.name = environment_get_variable("USERNAME");
 	if (os_type == os_macosx) global.name = environment_get_variable("USER");
@@ -24,3 +27,5 @@ else {
 
 instance_create_layer(x, y, "UI", oYearDisplay);
 instance_create_layer(1216, 32, "UI", oGameInfo);
+
+alarm[0] = room_speed;

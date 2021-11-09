@@ -18,6 +18,18 @@ function activateDeathClock(){
 	} else if (instance_exists(oBridge)) {
 		building_type = oBridge;
 		is_multicell = true;
+	} else if (instance_exists(oFuturePlaceholderOne)) {
+		building_type = oFuturePlaceholderOne;
+		is_multicell = false;
+	} else if (instance_exists(oFuturePlaceholderTwo)) {
+		building_type = oFuturePlaceholderTwo;
+		is_multicell = false;
+	} else if (instance_exists(oFuturePlaceholderThree)) {
+		building_type = oFuturePlaceholderThree;
+		is_multicell = false;
+	} else if (instance_exists(oFuturePlaceholderFour)) {
+		building_type = oFuturePlaceholderFour;
+		is_multicell = false;
 	} else if (instance_exists(oWell)) {
 		building_type = oWell;
 		is_multicell = true;
