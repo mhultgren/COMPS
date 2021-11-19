@@ -1,3 +1,4 @@
+// TODO: panning while zooming
 if (global.scroll) {
 	#region panning
 	var xx = camera_get_view_x(view_camera[0]);

@@ -14,7 +14,7 @@ function checkFileEditing(){
 		
 		if (main_data[0].gold != user_data.gold) {
 			var alert_info = {
-				text : "DON'T CHEAT.",
+				text : "I SEE WHAT YOU DID THERE. DON'T CHEAT.",
 				objective : false,
 				opened : false,
 				alert_index : 0
@@ -24,6 +24,10 @@ function checkFileEditing(){
 			
 			with oAlertToolbar {
 				array_insert(alerts, 0, alert_info);
+			}
+			
+			with oBuilding {
+				time_last_generated = unixTimestamp(date_current_datetime());
 			}
 		}
 	
