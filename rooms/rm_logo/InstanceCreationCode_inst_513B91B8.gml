@@ -1,0 +1,1 @@
+dest_room = rm_menu;

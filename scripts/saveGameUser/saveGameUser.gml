@@ -8,9 +8,7 @@ function saveGameUser(){
 	};
 	
 	var _string = string_replace_all(json_stringify(_saveData), ".0", "");
-	
-	show_debug_message(_string);
-	show_debug_message(encrypt(_string, 4));
+	_string += "\nZZZZZ HSQVX KVCDX PFGTM GXLMR WIIVV VAFJF MFLRV UPSTA IXDOC WAHGI TWWEL GQHUC KFDIM DIKXN BIOFR UWSXU RXCWV OXIFN PWILX VAHJU FPTTB NBDVV OAFAN ALSDF GMNIM QMWZZ YYYYY";
 	
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed, 1);
 	buffer_write(_buffer, buffer_string, _string);

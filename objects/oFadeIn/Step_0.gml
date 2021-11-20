@@ -1,0 +1,1 @@
+if (fade_counter == fade_timer) room_goto(dest_room);

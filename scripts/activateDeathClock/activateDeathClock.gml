@@ -48,7 +48,7 @@ function activateDeathClock(){
 		}
 		
 		instance_destroy(building_ref);
-	
+	// TODO: stop destroy building on creation
 		if (!is_multicell) {
 			with global.cells[building_cell_row, building_cell_col] {
 				object_contained = -1;
