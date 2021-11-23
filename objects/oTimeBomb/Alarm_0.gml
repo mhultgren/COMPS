@@ -12,8 +12,10 @@ with oAlertToolbar {
 }
 
 global.death_clock_last_time = unixTimestamp(date_current_datetime());
-global.death_clock_time = 60;
+global.death_clock_time = 600;
 array_push(global.parameters_met, "death clock on");
+
+write_email_message();
 
 saveGameDefault();
 game_end();

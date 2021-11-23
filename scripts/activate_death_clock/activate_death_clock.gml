@@ -1,4 +1,4 @@
-function activateDeathClock(){
+function activate_death_clock(){
 	var building_ref, building_x, building_y, is_multicell, building_cell_row, building_cell_col;
 	var building_type = -1;
 	

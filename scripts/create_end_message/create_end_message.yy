@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Objective Creation",
+    "path": "folders/Scripts/Objectives/Objective Creation.yy",
   },
   "resourceVersion": "1.0",
-  "name": "activateDeathClock",
+  "name": "create_end_message",
   "tags": [],
   "resourceType": "GMScript",
 }

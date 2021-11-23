@@ -6,7 +6,7 @@
     "path": "folders/Scripts/File Stuff.yy",
   },
   "resourceVersion": "1.0",
-  "name": "writeFirstFutureMessage",
+  "name": "create_readme",
   "tags": [],
   "resourceType": "GMScript",
 }

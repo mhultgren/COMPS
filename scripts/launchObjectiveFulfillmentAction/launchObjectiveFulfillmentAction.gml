@@ -9,5 +9,6 @@ function launchObjectiveFulfillmentAction(obj_name){
 		case "five structures and a bridge": fiveStructuresFulfilled(); break;
 		case "don't worry, keep building": wellObjectiveFulfilled(); break;
 		case "welcome back": firstFutureObjectiveFulfilled(); break;
+		case "tick tock": clock_objective_fulfilled(); break;
 	}
 }

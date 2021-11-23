@@ -1,6 +1,8 @@
 draw_set_font(fMain);
 check_clock = false;
 
+if (!file_exists("README.txt")) create_readme();
+
 if (file_exists("credits.ybx")) loadGame();
 else {
 	randomize();
@@ -28,4 +30,4 @@ else {
 instance_create_layer(x, y, "UI", oYearDisplay);
 instance_create_layer(1216, 32, "UI", oGameInfo);
 
-alarm[0] = room_speed;
+alarm[0] = room_speed*60;

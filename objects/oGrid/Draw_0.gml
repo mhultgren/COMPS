@@ -5,6 +5,8 @@ for (var tX=0; tX<global.cells_height; tX++) {
 		room_x = tile_to_screen_x(tX+1, tY+1);
 		room_y = tile_to_screen_y(tX+1, tY+1);
 		
+		//show_debug_message(string(tY) + " < " + string(array_length(global.cells[tX])));
+		
 		with (global.cells[tX, tY]) {
 			cell_row = tX;
 			cell_column = tY;

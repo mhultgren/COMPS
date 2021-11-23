@@ -1,4 +1,4 @@
-// TODO: potentially create multiCell class, for any object and/or structure which spans multiple cells
+event_inherited();
 
 sprite = sWell;
 red_index = 1;

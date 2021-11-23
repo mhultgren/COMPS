@@ -17,5 +17,7 @@ function getObjectiveDependency(obj_name){
 			return wellObjective();
 		case "welcome back":
 			return firstFutureObjective();
+		case "tick tock":
+			return clock_objective();
 	}
 }

@@ -1,2 +1,1 @@
-drawRed = false;
-sprite = sTree;
+first_step = true;

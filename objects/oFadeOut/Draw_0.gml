@@ -1,4 +1,4 @@
-draw_set_color(c_white);
+draw_set_color(fade_color);
 draw_set_alpha((fade_timer - fade_counter) / fade_timer);
 
 fade_counter--;

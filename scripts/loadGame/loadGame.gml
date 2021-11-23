@@ -57,9 +57,10 @@ function loadGame(){
 		var _cellsPerRow = 0;
 		var _objectsSeen = {};
 	
-		with (_grid) _cellsPerRow = global.cells_width;
-	
+		_cellsPerRow = global.cells_width;
+		
 		for (var col=0; col<array_length(_loadGrid); col++) {
+			
 			if (_cellCount == _cellsPerRow) {
 				row++;
 				_cellCount = 0;
@@ -85,6 +86,8 @@ function loadGame(){
 			
 				_createdCellId = id;
 				_cells[row, col % _cellsPerRow] = id;
+				//show_debug_message(string(row) + ", " + string(col % _cellsPerRow));
+				show_debug_message(col);
 			}
 			
 			if (_currentCell.cell_group != -1 && !ds_map_exists(cell_groups, _currentCell.cell_group)) {
@@ -206,8 +209,10 @@ function loadGame(){
 	checkFileEditing();
 	
 	if (array_contains(global.parameters_met, "death clock on")) {
-		activateDeathClock();
+		activate_death_clock();
 	}
 	
 	ds_map_destroy(cell_groups);
+	
+	show_debug_message("game loaded!");
 }

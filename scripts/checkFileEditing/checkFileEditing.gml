@@ -34,5 +34,12 @@ function checkFileEditing(){
 		if (array_contains(global.parameters_met, "create folder desc") && array_contains_insensitive(variable_struct_get_names(user_data), "power")) {
 			if (!array_contains(global.parameters_met, "turn on clock")) array_push(global.parameters_met, "turn on clock");
 		}
+		
+		if (!array_contains(global.parameters_met, "game over") && array_contains_insensitive(variable_struct_get_names(user_data), "placeholder")) {
+			show_debug_message(user_data);
+			if (user_data.placeholder) {
+				array_push(global.parameters_met, "game over");
+			}
+		}
 	}
 }

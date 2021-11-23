@@ -1,3 +1,5 @@
+event_inherited();
+
 under_construction = true;
 time_created = unixTimestamp(date_current_datetime());
 just_constructed = true;
