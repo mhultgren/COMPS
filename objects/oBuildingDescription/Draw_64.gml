@@ -4,7 +4,7 @@ if (first_step && array_contains(global.parameters_met, "create folder desc")) {
 	
 	if (!array_contains(global.parameters_met, "death clock on")) {
 		building_desc = "check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder check the folder ";	
-	} else {
+	} else if (!array_contains(global.parameters_met, "game over")){
 		var random_name = irandom(4);
 		if (random_name == 0) {
 			building_desc = global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name + " " + global.name;

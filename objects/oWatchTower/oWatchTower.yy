@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sHouse",
-    "path": "sprites/sHouse/sHouse.yy",
+    "name": "sWatchTower",
+    "path": "sprites/sWatchTower/sWatchTower.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Structures/Buildings.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oFuturePlaceholderThree",
+  "name": "oWatchTower",
   "tags": [],
   "resourceType": "GMObject",
 }

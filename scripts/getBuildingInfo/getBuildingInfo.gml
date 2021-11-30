@@ -116,14 +116,14 @@ function getBuildingInfo(building_object){
 			}
 		break;
 		
-		case oFuturePlaceholderThree:
+		case oWatchTower:
 			building_struct =
 			{
-				building : oFuturePlaceholderThree,
-				sprite : sHouse,
-				building_title : "THREE",
-				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+				building : oWatchTower,
+				sprite : sWatchTower,
+				building_title : "Watch Tower",
+				building_desc : "Here to ensure this community runs smoothly! Don't mind it's constant surveillance.",
+				building_cost : 1000 * ((instance_number(oWatchTower) * .2) + 1)
 			}
 		break;
 		

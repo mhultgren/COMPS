@@ -3,6 +3,7 @@ function activate_death_clock(){
 	var building_type = -1;
 	
 	// TODO: make death work outwards from initial point
+	// TODO: question.. destroy future buildings?
 	if (instance_exists(oHouse)) {
 		building_type = oHouse;
 		is_multicell = false;
@@ -24,8 +25,8 @@ function activate_death_clock(){
 	} else if (instance_exists(oFuturePlaceholderTwo)) {
 		building_type = oFuturePlaceholderTwo;
 		is_multicell = false;
-	} else if (instance_exists(oFuturePlaceholderThree)) {
-		building_type = oFuturePlaceholderThree;
+	} else if (instance_exists(oWatchTower)) {
+		building_type = oWatchTower;
 		is_multicell = false;
 	} else if (instance_exists(oFuturePlaceholderFour)) {
 		building_type = oFuturePlaceholderFour;

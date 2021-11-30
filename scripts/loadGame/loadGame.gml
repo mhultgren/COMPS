@@ -208,7 +208,9 @@ function loadGame(){
 	
 	checkFileEditing();
 	
-	if (array_contains(global.parameters_met, "death clock on")) {
+	if (array_contains(global.parameters_met, "death clock on") && !array_contains(global.parameters_met, "game over")) {
+		if (!file_exists("one_more_try.txt")) write_email_message();
+		
 		activate_death_clock();
 	}
 	

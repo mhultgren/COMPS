@@ -14,7 +14,12 @@ function getUnlockedBuildings(){
 		if (array_contains(global.parameters_met, "mine objective met")) array_push(returned_buildings, oBoatHouse, oStorehouse, oBridge);
 		if (array_contains(global.parameters_met, "five structures objective met") && !instance_exists(oWell)) array_push(returned_buildings, oWell);
 	} else {
-		returned_buildings = [oFuturePlaceholderOne, oFuturePlaceholderTwo, oFuturePlaceholderThree, oFuturePlaceholderFour];
+		if (!array_contains(global.parameters_met, "game over")) {
+			returned_buildings = [oFuturePlaceholderOne, oFuturePlaceholderTwo, oWatchTower, oFuturePlaceholderFour];
+			if (array_contains(global.parameters_met, "death clock on")) returned_buildings = [];
+		} else {
+			returned_buildings = [oHouse, oMine, oBoatHouse, oStorehouse, oBridge, oWell, oFuturePlaceholderOne, oFuturePlaceholderTwo, oWatchTower, oFuturePlaceholderFour]
+		}
 	}
 	return returned_buildings;
 }

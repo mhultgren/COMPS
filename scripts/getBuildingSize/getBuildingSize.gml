@@ -10,7 +10,7 @@ function getBuildingSize(building_object){
 		
 		case oFuturePlaceholderOne : return [64, 64];
 		case oFuturePlaceholderTwo : return [64, 64];
-		case oFuturePlaceholderThree : return [64, 64];
+		case oWatchTower : return [64, 64];
 		case oFuturePlaceholderFour : return [64, 64];
 	}
 	

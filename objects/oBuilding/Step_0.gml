@@ -27,7 +27,7 @@ if (under_construction) {
 			
 			var num_to_generate = floor(seconds_passed / time_required_generate);
 			
-			if (!array_contains(global.parameters_met, "death clock on")) global.coins += amount_generated * num_to_generate;
+			if (!array_contains(global.parameters_met, "death clock on") || array_contains(global.parameters_met, "game over")) global.coins += amount_generated * num_to_generate;
 			else global.coins -= amount_generated * num_to_generate;
 			
 			time_last_generated += time_required_generate * num_to_generate;

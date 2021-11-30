@@ -16,7 +16,7 @@ function get_iso_sprite(object_id){
 				case oTutorialHouse : return sTutorialHouse;
 				case oFuturePlaceholderOne : return sHouse;
 				case oFuturePlaceholderTwo : return sHouse;
-				case oFuturePlaceholderThree : return sHouse;
+				case oWatchTower : return sWatchTower;
 				case oFuturePlaceholderFour : return sHouse;
 			}
 		} else {
@@ -33,7 +33,7 @@ function get_iso_sprite(object_id){
 				case oTutorialHouse : return sTutorialHouse;
 				case oFuturePlaceholderOne : return sHouse;
 				case oFuturePlaceholderTwo : return sHouse;
-				case oFuturePlaceholderThree : return sHouse;
+				case oWatchTower : return sWatchTower;
 				case oFuturePlaceholderFour : return sHouse;
 			}
 		}

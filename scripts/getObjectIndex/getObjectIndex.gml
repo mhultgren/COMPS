@@ -24,8 +24,8 @@ function getObjectIndex(obj_index){
 			return oFuturePlaceholderOne;
 		case "oFuturePlaceholderTwo":
 			return oFuturePlaceholderTwo;
-		case "oFuturePlaceholderThree":
-			return oFuturePlaceholderThree;
+		case "oWatchTower":
+			return oWatchTower;
 		case "oFuturePlaceholderFour":
 			return oFuturePlaceholderFour;
 	}
