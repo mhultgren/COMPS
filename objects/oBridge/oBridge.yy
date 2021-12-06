@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sBridgee",
-    "path": "sprites/sBridgee/sBridgee.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

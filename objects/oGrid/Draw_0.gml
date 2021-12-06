@@ -12,7 +12,10 @@ for (var tX=0; tX<global.cells_height; tX++) {
 			cell_column = tY;
 			
 			// TODO: make separate terrain variable, to keep water / dirt / etc. despite object contained
-			if (terrain = "grass") draw_sprite(sTile, 0, room_x, room_y);
+			if (terrain = "grass") {
+				if (global.year < 3015) draw_sprite(sTile, 0, room_x, room_y);
+				else draw_sprite(sTile, 2, room_x, room_y);
+			}
 			else if (terrain = "water") draw_sprite(sWaterTile, 0, room_x, room_y);
 			else if (terrain = "void") draw_sprite(sVoidTile, 0, room_x, room_y);
 			

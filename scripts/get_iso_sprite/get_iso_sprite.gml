@@ -22,7 +22,7 @@ function get_iso_sprite(object_id){
 		} else {
 			switch (object_index) {
 				case oCell			: return sCell;
-				case oTree			: return sTree;
+				case oTree			: return sSnowTree;
 				case oMine			: return sMine;
 				case oWell			: return sWell;
 				case oHouse			: return sHouse;
