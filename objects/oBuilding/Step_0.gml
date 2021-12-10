@@ -1,15 +1,17 @@
 if (under_construction) {
+	image_speed = 0;
 	var seconds_passed = unixTimestamp(date_current_datetime()) - time_created;
+	
+	image_alpha = clamp(seconds_passed / time_required, 0.1, 1);
 	
 	if (seconds_passed >= time_required) {
 		under_construction = false;
-		image_index = 2;
 		time_last_generated = unixTimestamp(date_current_datetime()) - (seconds_passed - time_required);
-	} else if (seconds_passed >= time_required * 0.5) image_index = 1;
-	else image_index = 0;
+	}
 	
 	time_left = time_required - seconds_passed;
 } else {
+	image_speed = 1;
 	if (generates_gold) {
 		var seconds_passed = unixTimestamp(date_current_datetime()) - time_last_generated;
 		
@@ -35,6 +37,4 @@ if (under_construction) {
 		
 		time_left = time_required_generate - seconds_passed;
 	}
-	
-	image_index = 2;
 }

@@ -25,6 +25,7 @@ if (!first_step) {
 		if (at_rightmost) left = true;
 		if (at_leftmost) left = false;
 	
+		// create two river objects on either side if river splits
 		if (splits) {
 			instance_create_layer(x + 64, y + 64, "Water", oRiver);
 			instance_create_layer(x - 64, y + 64, "Water", oRiver);
@@ -38,3 +39,4 @@ if (!first_step) {
 		}
 	}
 }
+

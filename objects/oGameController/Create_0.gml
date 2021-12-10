@@ -3,6 +3,8 @@ check_clock = false;
 
 if (!file_exists("README.txt")) create_readme();
 
+// if main save file exists, load the game
+// otherwise, create new game
 if (file_exists("credits.ybx")) loadGame();
 else {
 	randomize();
@@ -13,11 +15,13 @@ else {
 	global.death_clock_time = 0;
 	global.death_clock_last_time = 0;
 	
+	// name extraction using environment variables
 	if (os_type == os_windows) global.name = environment_get_variable("USERNAME");
 	if (os_type == os_macosx) global.name = environment_get_variable("USER");
 
 
 	with instance_create_layer(x, y, "Grid", oGrid) {
+		// randomly select spot on map to begin generating river
 		var cell_water = (64 * irandom_range(25, global.cells_width-25)) + 32;
 		
 		instance_create_layer(cell_water, 32, "Water", oRiver);

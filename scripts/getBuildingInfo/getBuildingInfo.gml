@@ -94,25 +94,25 @@ function getBuildingInfo(building_object){
 			}
 		break;
 		
-		case oFuturePlaceholderOne:
+		case oFutureHome:
 			building_struct =
 			{
-				building : oFuturePlaceholderOne,
-				sprite : sHouse,
-				building_title : "ONE",
+				building : oFutureHome,
+				sprite : sFutureHome,
+				building_title : "Future Home",
 				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+				building_cost : 35 * ((instance_number(oFutureHome) * .2) + (instance_number(oFutureHome) > 0))
 			}
 		break;
 		
-		case oFuturePlaceholderTwo:
+		case oCubeSpinner:
 			building_struct =
 			{
-				building : oFuturePlaceholderTwo,
-				sprite : sHouse,
-				building_title : "TWO",
+				building : oCubeSpinner,
+				sprite : sCubeSpinner,
+				building_title : "Cube Spinner",
 				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
+				building_cost : 35 * ((instance_number(oCubeSpinner) * .2) + (instance_number(oCubeSpinner) > 0))
 			}
 		break;
 		
@@ -124,17 +124,6 @@ function getBuildingInfo(building_object){
 				building_title : "Watch Tower",
 				building_desc : "Here to ensure this community runs smoothly! Don't mind it's constant surveillance.",
 				building_cost : 1000 * ((instance_number(oWatchTower) * .2) + 1)
-			}
-		break;
-		
-		case oFuturePlaceholderFour:
-			building_struct =
-			{
-				building : oFuturePlaceholderFour,
-				sprite : sHouse,
-				building_title : "FOUR",
-				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oHouse) * .2) + (instance_number(oHouse) > 0))
 			}
 		break;
 	}
