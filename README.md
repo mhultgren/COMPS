@@ -1,7 +1,7 @@
 ## Happy Pastures
 A videogame coded by Myles Hultgren for senior project in Computer Science. A simple isometric city builder with psychological horror and puzzle elements.
 
-In order to successfully import, edit, build, and run Happy Pastures, follow the steps below. Keep in mind that your computer must be using either MacOS or Windows to successfully run the game in its current state.
+In order to successfully import, edit, build, and run Happy Pastures, follow the steps below. Keep in mind that your computer must be using either MacOS or Windows (with 3.5GB minimum storage space) to successfully run the game in its current state.
 - The first step is to make sure you have Git downloaded on your computer. If not, head to the Git download page [here](https://git-scm.com/downloads), and download Git for your respective OS. Once the Git installer is downloaded, open the file and install Git onto your machine.
 - Your computer must have GameMakerStudio 2 installed in order to have access to the game’s source code. Free and paid versions of GameMaker are available on their [website](https://www.yoyogames.com/en/get), though you will need to set up an account with GameMaker regardless of whether GameMaker is free or paid. Happy Pastures was primarily developed in GameMaker v2.3.7.603, however the most recent version should work. Once the GameMaker installer is downloaded, open the file and install GameMaker.
 
