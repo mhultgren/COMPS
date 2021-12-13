@@ -14,3 +14,9 @@ In order to successfully import, edit, build, and run Happy Pastures, follow the
 
 ![run sc](https://user-images.githubusercontent.com/20102564/145659900-30d0460e-bcaa-4fb2-89ca-7c8f5bbd6c90.png)
 - With the project opened, you should now be able to look at project files, make edits as you see fit, and run the project. To ensure everything is in working order, try running the project by pressing the run button in the top of the editor (circled in the screenshot above). Wait for the game to build, and it should then open in a separate game window. Congratulations!
+
+Special thanks to Justin Li & Sky Anderson for their help in discussing and brainstorming this game and its mechanics.
+
+Music credits to Charlie Finnerty.
+
+This game makes use of the free GMS2 script [Execute Shell](https://marketplace.yoyogames.com/assets/575/execute-shell) by Samuel Venable.
