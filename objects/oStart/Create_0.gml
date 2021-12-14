@@ -1,1 +1,0 @@
-if (!file_exists("credits.ybx")) room_goto(rm_test_disclaimer);

@@ -12,5 +12,5 @@ generates_gold = true;
 time_last_generated = 0;
 
 // time needed (secs) to generate thing
-time_required_generate = 120;
-amount_generated = 70;
+time_required_generate = 300;
+amount_generated = 750;

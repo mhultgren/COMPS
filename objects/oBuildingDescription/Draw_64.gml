@@ -1,4 +1,3 @@
-// TODO: enable scrolling descriptions
 if (first_step && array_contains(global.parameters_met, "create folder desc")) {
 	first_step = false;
 	

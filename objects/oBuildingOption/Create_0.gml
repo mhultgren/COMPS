@@ -1,5 +1,7 @@
-building = oTestBuilding;
-sprite = sTestBuilding;
+// holds information about a specific building,
+// passes these on to part of a building's page i.e. oBuildingPurchase, oBuildingDescription, etc.
+building = oHouse;
+sprite = sHouse;
 building_title = "";
 building_desc = "";
 building_flavor_text = "";

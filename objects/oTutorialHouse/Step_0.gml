@@ -8,7 +8,6 @@ if (!under_construction && just_constructed) {
 	if (!array_contains(global.parameters_met, "tutorial alert sent")) {
 		with oAlertToolbar {
 		
-			// TODO: replace GAME TITLE with fake game title
 			var first_message = {
 				objective : true,
 				text : "Hello there! I will be your guide for the tutorial section for this game, Happy Pastures." + " You've already created your first house" + chr(8212) + "mine, in fact" + chr(8212) + "but you still have things to learn."

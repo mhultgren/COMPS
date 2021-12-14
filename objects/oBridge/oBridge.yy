@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sBridge",
+    "path": "sprites/sBridge/sBridge.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

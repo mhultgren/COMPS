@@ -14,4 +14,6 @@ for (var i=32; i <= room_width - 32; i+=64) {
 global.cells_height = array_length(global.cells);
 global.cells_width = array_length(global.cells[0]);
 
+// keep track of all multicell objects using this ds list,
+// so they aren't drawn multiple times for each cell
 multicells = ds_list_create();

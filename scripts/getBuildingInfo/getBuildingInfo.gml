@@ -4,24 +4,12 @@ function getBuildingInfo(building_object){
 	var building_struct = {};
 	
 	switch (building_object)
-	{
-		case oTestBuilding:
-			building_struct = 
-			{
-				building : oTestBuilding,
-				sprite : sTestBuilding,
-				building_title : "Test Building",
-				building_desc : "This is a test description",
-				building_cost : 20
-			};
-		break;
-		
+	{	
 		case oTutorialHouse:
 			building_struct =
 			{
 				building		: oTutorialHouse,
 				sprite			: sTutorialHouse,
-				// TODO: building title change?
 				building_title	: "Tutorial House",
 				building_desc	: "Build this house! It's free after all.",
 				building_cost	: 0
@@ -100,8 +88,8 @@ function getBuildingInfo(building_object){
 				building : oFutureHome,
 				sprite : sFutureHome,
 				building_title : "Future Home",
-				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oFutureHome) * .2) + (instance_number(oFutureHome) > 0))
+				building_desc : "A home of the future! Watch as it uses trademark lifting technology to lift and lower a giant roof and a giant ball. Cool, huh?",
+				building_cost : 200 * ((instance_number(oFutureHome) * .2) + 1)
 			}
 		break;
 		
@@ -111,8 +99,8 @@ function getBuildingInfo(building_object){
 				building : oCubeSpinner,
 				sprite : sCubeSpinner,
 				building_title : "Cube Spinner",
-				building_desc : "A little tiny house.",
-				building_cost : 35 * ((instance_number(oCubeSpinner) * .2) + (instance_number(oCubeSpinner) > 0))
+				building_desc : "What exactly does this building do? Why, it spins a cube of course! Why, you might ask? A cube does not spin because it has an answer, it spins because it is a cube.",
+				building_cost : 700 * ((instance_number(oCubeSpinner) * .2) + 1)
 			}
 		break;
 		

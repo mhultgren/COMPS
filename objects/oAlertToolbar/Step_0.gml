@@ -9,6 +9,7 @@ var new_length = array_length(alerts);
 if (new_length != alerts_size) {
 	instance_destroy(oAlert);
 	
+	// create alert objects in toolbar using references in alerts list
 	for (var i=0; i<new_length; i++) {
 		if (!alerts[i].objective) {
 			with instance_create_layer(x/global.zoom + 48, y/global.zoom + (i+1)*64, "UI", oDialogueAlert) {
@@ -28,8 +29,6 @@ if (new_length != alerts_size) {
 			}
 		}
 	}
-	
-	//saveGameDefault();
 }
 
 alerts_size = new_length;

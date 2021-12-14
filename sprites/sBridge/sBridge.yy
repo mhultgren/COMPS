@@ -9,13 +9,13 @@
   "swfPrecision": 2.525,
   "bbox_left": 56,
   "bbox_right": 148,
-  "bbox_top": 33,
-  "bbox_bottom": 94,
+  "bbox_top": 1,
+  "bbox_bottom": 62,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 192,
-  "height": 128,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"563a4a1d-f988-44dd-aecd-1a5ca56ad47a","path":"sprites/sBridge/sBridge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"563a4a1d-f988-44dd-aecd-1a5ca56ad47a","path":"sprites/sBridge/sBridge.yy",},"LayerId":{"name":"da9425db-891e-4b2f-a70f-c7a00fa5fc31","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBridge","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","name":"563a4a1d-f988-44dd-aecd-1a5ca56ad47a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"87850ff3-0aa3-4068-b6ad-a021716902f7","path":"sprites/sBridge/sBridge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"87850ff3-0aa3-4068-b6ad-a021716902f7","path":"sprites/sBridge/sBridge.yy",},"LayerId":{"name":"fd864ef6-c264-4f06-9ef4-79472ca78f99","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBridge","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","name":"87850ff3-0aa3-4068-b6ad-a021716902f7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sBridge","path":"sprites/sBridge/sBridge.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8580d258-674d-414f-b06c-d1291e3decab","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"563a4a1d-f988-44dd-aecd-1a5ca56ad47a","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"acb9eb96-1a9a-4b8b-95b3-4324444fd4d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87850ff3-0aa3-4068-b6ad-a021716902f7","path":"sprites/sBridge/sBridge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 66,
-    "yorigin": 38,
+    "xorigin": 73,
+    "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBridge","path":"sprites/sBridge/sBridge.yy",},
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"da9425db-891e-4b2f-a70f-c7a00fa5fc31","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fd864ef6-c264-4f06-9ef4-79472ca78f99","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Structures",
+    "path": "folders/Sprites/Structures.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBridge",

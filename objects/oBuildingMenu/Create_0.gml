@@ -1,3 +1,6 @@
+// used for holding all available buildings,
+// user can page through menu to select a building to create
+// each page holds its own oBuildingOption
 global.scroll = false;
 unlocked_buildings = getUnlockedBuildings();
 

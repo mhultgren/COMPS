@@ -7,14 +7,12 @@ function loadGame(){
 	global.zoom = 1;
 	global.year = 945;
 	
-	// TODO: add population increase mechanic
 	global.population = 0;
 
 	instance_destroy(oFlora);
 	instance_destroy(oWater);
 	instance_destroy(oStructure);
 	instance_destroy(oGrid);
-	instance_destroy(oGrass);
 	instance_destroy(oBuildingMenu);
 	instance_destroy(oCreator);
 	instance_destroy(oAlertToolbar);
@@ -86,8 +84,6 @@ function loadGame(){
 			
 				_createdCellId = id;
 				_cells[row, col % _cellsPerRow] = id;
-				//show_debug_message(string(row) + ", " + string(col % _cellsPerRow));
-				show_debug_message(col);
 			}
 			
 			if (_currentCell.cell_group != -1 && !ds_map_exists(cell_groups, _currentCell.cell_group)) {
@@ -212,6 +208,11 @@ function loadGame(){
 		if (!file_exists("one_more_try.txt")) write_email_message();
 		
 		activate_death_clock();
+	}
+	
+	if (array_contains(global.parameters_met, "game crashed") && !array_contains(global.parameters_met, "crash message sent")) {
+		send_crash_message();
+		array_push(global.parameters_met, "crash message sent");
 	}
 	
 	ds_map_destroy(cell_groups);

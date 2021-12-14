@@ -1,6 +1,5 @@
 function saveGameDefault(){
 	// make save array
-	// [_saveGlobals, _saveGrid, _saveObjects]
 	var _saveData = array_create(0);
 
 	// save global variables, cells

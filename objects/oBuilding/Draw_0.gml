@@ -6,7 +6,6 @@ if (under_construction && first_step) {
 	
 	var building_size = getBuildingSize(object_index);
 	
-	//TODO: draw text isometric
 	if (building_size[0] > 64 || building_size[1] > 64) {
 		room_x = tile_to_screen_x(parent_cell_row+1+(building_size[0]/64/2), parent_cell_col+1);
 	}

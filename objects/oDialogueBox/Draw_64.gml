@@ -7,7 +7,6 @@ draw_set_valign(fa_top);
 var string_sep = 22;
 var string_w = 465;
 
-// TODO: separate styling for solved objective
 if (objective) {
 	draw_set_color(c_green);
 	draw_text_ext_transformed(694, 120, objective_name, string_sep, string_w, 1.3, 1.3, 0);

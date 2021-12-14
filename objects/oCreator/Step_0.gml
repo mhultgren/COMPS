@@ -1,4 +1,3 @@
-// TODO: add clickable cancel
 if (keyboard_check_pressed(vk_escape)) {
 	global.coins += amount_spent;
 	global.building_selected = false;
@@ -15,7 +14,6 @@ if (keyboard_check_pressed(vk_escape)) {
 
 if (mouse_check_button_pressed(mb_left) && within_bounds) {
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
-		show_debug_message(terrain);
 		if (meetsRequirements(other.building, id, -1)) {
 			var _addedId = 0;
 			var _addedObject = 0;
@@ -26,6 +24,8 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 				with instance_nearest(x, y, oFlora) instance_destroy();
 			}
 			
+			// create building at cell location,
+			// setting building's parameters on creation
 			with instance_create_layer(x, y, "Buildings", other.building) {
 				_addedObject = object_index;
 				_addedId = id;
@@ -44,6 +44,9 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 			
 			object_contained = _addedObject;
 			object_id = _addedId;
+				
+			// add boat to adjacent water tile if boat house created
+			if (object_contained == oBoatHouse) add_boat(id);
 				
 			global.building_selected = false;
 			saveGameDefault();

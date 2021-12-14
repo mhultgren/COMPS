@@ -11,12 +11,15 @@ for (var tX=0; tX<global.cells_height; tX++) {
 			cell_row = tX;
 			cell_column = tY;
 			
-			if (terrain = "grass") {
+			if (terrain == "grass") {
 				if (global.year < 3015) draw_sprite(sTile, 0, room_x, room_y);
 				else draw_sprite(sTile, 2, room_x, room_y);
 			}
-			else if (terrain = "water") draw_sprite(sWaterTile, 0, room_x, room_y);
-			else if (terrain = "void") draw_sprite(sVoidTile, 0, room_x, room_y);
+			else if (contains_water) {
+				draw_sprite(sWaterTile, 0, room_x, room_y);
+				if (terrain == "boat") draw_sprite(sBoat, 0, room_x, room_y);
+			}
+			else if (terrain == "void") draw_sprite(sVoidTile, 0, room_x, room_y);
 			
 			// draw cell dividing lines if player is placing a building
 			if (global.drawCells) draw_sprite(sprite_index, image_index, room_x, room_y);

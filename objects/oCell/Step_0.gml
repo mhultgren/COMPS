@@ -1,7 +1,6 @@
 contains_structure = object_contained != -1 && object_is_ancestor(object_contained, oStructure);
 contains_flora = object_contained != -1 && object_is_ancestor(object_contained, oFlora);
-//contains_water = object_contained != -1 && object_is_ancestor(object_contained, oWater);
-contains_water = terrain == "water";
+contains_water = terrain == "water" || terrain == "boat";
 
 if (!instance_exists(oMultiCellCreator)) {
 	if (global.building_selected) {

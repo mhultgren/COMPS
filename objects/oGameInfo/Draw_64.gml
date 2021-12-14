@@ -1,3 +1,5 @@
+// draw important game info, namely current gold and population levels
+
 draw_set_alpha(0.7);
 draw_sprite(sGameInfo, 0, x, y);
 

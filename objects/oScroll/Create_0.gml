@@ -1,3 +1,7 @@
+// controls both panning and zooming functionality
+// remember to use global.zoom in all draw functions in order to scale objects relative to zoom
+// also updating image_xscale & image_yscale
+
 buffer = 40;
 left_edge = 0;
 left_edge_max = left_edge + buffer;

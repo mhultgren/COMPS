@@ -1,4 +1,3 @@
-// TODO: add clickable cancel
 if (keyboard_check_pressed(vk_escape)) {
 	global.coins += amount_spent;
 	global.building_selected = false;
@@ -22,6 +21,7 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 	var cell_col = iso_mouse_y;
 	
 	with (global.cells[iso_mouse_x, iso_mouse_y]) {
+		// add all cells contained in buildings size to be checked for requirements
 		var cell_list_size = collision_rectangle_list(x-32, y-32, x+(struct_width - 33), y+(struct_height - 33), oCell, false, false, cell_list, false);
 		
 		if (meetsRequirements(other.building, id, cell_list)) {
@@ -50,18 +50,6 @@ if (mouse_check_button_pressed(mb_left) && within_bounds) {
 					}
 				}
 			}
-			
-			/*
-			if (instance_exists(oFlora)) {
-				var flora_depth = 0;
-				
-				with instance_nearest(x + sprite_width*.5, y + sprite_height + 20, oFlora) flora_depth = depth;
-				
-				with _addedObject {
-					depth = flora_depth - 1;
-				}
-			}
-			*/
 				
 			global.building_selected = false;
 			saveGameDefault();

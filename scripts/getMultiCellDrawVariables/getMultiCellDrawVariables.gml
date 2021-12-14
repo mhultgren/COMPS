@@ -1,13 +1,13 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// get x & y offsets for specific multi cell buildings
 function getMultiCellDrawVariables(building){
 	var variables = [];
 	
 	switch (building) {
-		case oWell: variables = [-185, -220, 1]; break;
-		case oBridge: variables = [-188, -98, 2]; break;
-		case oMine: variables = [-148, -183, 1.5]; break;
-		case oStorehouse: variables = [-188, -114, 3]; break;
+		case oBridge: variables = [-76, -136]; break;
+		case oStorehouse: variables = [-60, -66]; break;
+		case oFutureHome: variables = [0, 32]; break;
+		case oCubeSpinner: variables = [0, -96]; break;
+		case oWatchTower: variables = [0, 64]; break;
 	}
 	
 	return variables;
